@@ -1,7 +1,12 @@
-[gd_scene load_steps=17 format=3 uid="uid://iusubyg6sstx"]
+[gd_scene load_steps=19 format=3 uid="uid://iusubyg6sstx"]
 
 [ext_resource type="Script" uid="uid://b5grbri3i4vc2" path="res://player.gd" id="1_4flbx"]
-[ext_resource type="Texture2D" path="res://gustav/player-sprites.tres" id="2_i3pqv"]
+[ext_resource type="Shader" uid="uid://b37drul0m7oev" path="res://gustav/drunk.gdshader" id="1_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://bvj7ml70luddt" path="res://gustav/player-sprites.tres" id="2_i3pqv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hqtel"]
+shader = ExtResource("1_i3pqv")
+shader_parameter/active = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
 size = Vector2(16, 16)
@@ -119,6 +124,7 @@ animations = [{
 }]
 
 [node name="Player" type="Area2D"]
+material = SubResource("ShaderMaterial_hqtel")
 collision_layer = 2
 collision_mask = 7
 script = ExtResource("1_4flbx")
@@ -128,5 +134,6 @@ shape = SubResource("RectangleShape2D_i3pqv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 3
+use_parent_material = true
 sprite_frames = SubResource("SpriteFrames_sweqy")
 animation = &"idle"

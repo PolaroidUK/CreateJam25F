@@ -46,10 +46,17 @@ func _unhandled_input(event):
 		return
 	for dir in inputs.keys():
 		if event.is_action_pressed(dir):
+			# show drunkness
+			if isDrunk && movecount%4==2:
+				material.set_shader_parameter("active", true);
+			else:
+				material.set_shader_parameter("active", false);
+			# do drunk move
 			if isDrunk && movecount%4==3:
 				move(inputsflipped[dir])
 			else:
 				move(inputs[dir])
+				
 			
 func movementStoppedGlobaly():
 	moving = false	
