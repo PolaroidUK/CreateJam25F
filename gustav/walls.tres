@@ -1,0 +1,8 @@
+[gd_resource type="CanvasTexture" load_steps=3 format=3 uid="uid://dcas40ltrndco"]
+
+[ext_resource type="Texture2D" uid="uid://2qvomqyrw4hy" path="res://tempAssets/Tilesets/Wooden_House_Walls_Tilset.png" id="1_qn0qe"]
+[ext_resource type="Texture2D" uid="uid://chw1364hc4bik" path="res://gustav/Wooden_House_Walls_Tilset-normals.png" id="2_20nqs"]
+
+[resource]
+diffuse_texture = ExtResource("1_qn0qe")
+normal_texture = ExtResource("2_20nqs")
