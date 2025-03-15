@@ -14,10 +14,12 @@ func _ready() -> void:
 	add_child(timer)
 	timer.timeout.connect(EndMovement)
 	StartMove.connect(StartMovement)
+	
 
 func StartMovement() -> void:
 	timer.start()
 
 func EndMovement() -> void:
+	get_tree().call_group("tile","snap")
 	StopMove.emit()
 	

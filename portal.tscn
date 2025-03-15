@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci33ppe8r0e21"]
+
+[ext_resource type="Script" uid="uid://bejnselo7s8ns" path="res://portal.gd" id="2_6r214"]
+[ext_resource type="Texture2D" uid="uid://kuomo23pbfrq" path="res://tempAssets/Objects/Basic_Furniture.png" id="2_grrij"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6r214"]
+size = Vector2(8, 8)
+
+[node name="TileObject" type="Area2D"]
+collision_layer = 0
+script = ExtResource("2_6r214")
+metadata/_custom_type_script = "uid://q7klohqhqguf"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6r214")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_grrij")
+region_enabled = true
+region_rect = Rect2(96, 48, 16, 16)
