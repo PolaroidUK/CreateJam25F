@@ -1,14 +1,33 @@
 extends Tile
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 var inputs = {"ui_right": Vector2.RIGHT,"ui_left": Vector2.LEFT,"ui_up": Vector2.UP,"ui_down": Vector2.DOWN}
 
 var moving = false
+var moving_in_dir = Vector2.ZERO
+
+func animate() -> void:
+	match moving_in_dir:
+		Vector2.RIGHT:
+			animated_sprite_2d.play("run_right")
+		Vector2.LEFT:
+			animated_sprite_2d.play("run_left")
+		Vector2.UP:
+			animated_sprite_2d.play("run_up")
+		Vector2.DOWN:
+			animated_sprite_2d.play("run_down")
+		_:
+			animated_sprite_2d.play("idle")
+
+func _process(delta: float) -> void:
+	animate()
 
 
 
 func move(dir:Vector2):
 	if is_tile_free_direction(dir):
 		moving = true
+		moving_in_dir = dir;
 		await tween_in_direction(dir).finished	
 		Gridmanager.StartMove.emit()
 	else:
@@ -26,6 +45,7 @@ func _unhandled_input(event):
 			
 func movementStoppedGlobaly():
 	moving = false	
+	moving_in_dir = Vector2.ZERO
 	for dir in inputs.keys():
 		if Input.is_action_pressed(dir):
 			move(inputs[dir])
