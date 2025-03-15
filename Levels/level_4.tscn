@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt4lhp8j3jukj"]
+
+[ext_resource type="PackedScene" uid="uid://cpavx6vcpj0th" path="res://Levels/level_3.tscn" id="1_ftfcu"]
+
+[node name="level" instance=ExtResource("1_ftfcu")]
+
+[node name="Player" parent="." index="2"]
+isDrunk = true
+
+[node name="Mushroom" parent="." index="3"]
+nextLevelnumber = "5"

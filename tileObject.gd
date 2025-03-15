@@ -1,7 +1,7 @@
 class_name TileObject
 extends Tile
 
-@export var actions = []
+@export var actions : PackedVector2Array= []
 var currentActionIndex = 0
 @export var canPush = true
 	
@@ -11,6 +11,9 @@ func _tile_init() -> void:
 	
 func move():
 	var action = actions[currentActionIndex]
+	if	action == Vector2.ZERO:
+		iterate_actions()
+		return
 	if is_tile_free_direction(action):
 		tween_in_direction(action)
 		

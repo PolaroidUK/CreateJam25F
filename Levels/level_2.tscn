@@ -5,4 +5,5 @@
 [node name="level2" instance=ExtResource("1_ll1bl")]
 
 [node name="Mushroom" parent="." index="3"]
-actions = [Vector2(-1, 0), Vector2(0, 1), Vector2(0, 1)]
+nextLevelnumber = "3"
+actions = [Vector2(0, 1), Vector2(0, 1), Vector2(-1, 0)]

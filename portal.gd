@@ -3,7 +3,7 @@ class_name portal
 extends TileObject
 
 @export var partner_portal:portal
-
+@export var isActive = false
 
 func movementStoppedGlobaly():
 	for body in get_overlapping_areas():

@@ -2,9 +2,11 @@ extends Tile
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 var inputs = {"ui_right": Vector2.RIGHT,"ui_left": Vector2.LEFT,"ui_up": Vector2.UP,"ui_down": Vector2.DOWN}
-
+var inputsflipped = {"ui_right": Vector2.LEFT,"ui_left": Vector2.RIGHT,"ui_up": Vector2.DOWN,"ui_down": Vector2.UP}
 var moving = false
 var moving_in_dir = Vector2.ZERO
+@export var isDrunk = false
+var movecount = 0
 
 func animate() -> void:
 	match moving_in_dir:
@@ -22,26 +24,32 @@ func animate() -> void:
 func _process(delta: float) -> void:
 	animate()
 
-
-
 func move(dir:Vector2):
 	if is_tile_free_direction(dir):
 		moving = true
 		moving_in_dir = dir;
-		await tween_in_direction(dir).finished	
+		await tween_in_direction(dir).finished
+		for body in get_overlapping_areas():
+			if	body.has_method("eat"):
+				body.call("eat")
 		Gridmanager.StartMove.emit()
+		movecount = movecount + 1
 	else:
 		var hit = ray.get_collider()
 		if (hit.has_method(useMN)):
 			hit.call(useMN,self) 
 			Gridmanager.StartMove.emit()
+			movecount = movecount + 1
 
 func _unhandled_input(event):
 	if moving:
 		return
 	for dir in inputs.keys():
 		if event.is_action_pressed(dir):
-			move(inputs[dir])
+			if isDrunk && movecount%4==3:
+				move(inputsflipped[dir])
+			else:
+				move(inputs[dir])
 			
 func movementStoppedGlobaly():
 	moving = false	
@@ -60,10 +68,5 @@ func take_item() -> Area2D:
 	item = null
 	return item_to_Give	
 	
-	
 func eat():
 	print("win")
-
-
-
-	

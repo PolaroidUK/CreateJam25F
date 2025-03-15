@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnsufxk01eny5"]
+
+[ext_resource type="Script" uid="uid://q7klohqhqguf" path="res://tileObject.gd" id="1_ehvbi"]
+[ext_resource type="Texture2D" uid="uid://kuomo23pbfrq" path="res://tempAssets/Objects/Basic_Furniture.png" id="2_00url"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4jljt"]
+size = Vector2(16, 16)
+
+[node name="Chair" type="Area2D"]
+script = ExtResource("1_ehvbi")
+metadata/_custom_type_script = "uid://q7klohqhqguf"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4jljt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_00url")
+region_enabled = true
+region_rect = Rect2(80, 32, 16, 16)
