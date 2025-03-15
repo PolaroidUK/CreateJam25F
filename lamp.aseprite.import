@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dgomeq2ihhh0x"
+path="res://.godot/imported/lamp.aseprite-291dfac2f9ca113f6d5944fb290c5dff.res"
+
+[deps]
+
+source_file="res://lamp.aseprite"
+dest_files=["res://.godot/imported/lamp.aseprite-291dfac2f9ca113f6d5944fb290c5dff.res"]
+
+[params]
+
