@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bupuwcp6l0iw3" path="res://Levels/baselevel.tscn" id="1_n0qsc"]
 [ext_resource type="PackedScene" uid="uid://cbws3t8oasyqw" path="res://Bookcase.tscn" id="2_dilhk"]
+[ext_resource type="Shader" path="res://gustav/woble.gdshader" id="2_uclwg"]
 [ext_resource type="PackedScene" uid="uid://ci33ppe8r0e21" path="res://portal.tscn" id="3_3mhv4"]
 [ext_resource type="PackedScene" uid="uid://b30yt8tjhkgd3" path="res://ChairR.tscn" id="4_syshm"]
 [ext_resource type="PackedScene" uid="uid://bvsqsjw5ralnb" path="res://Table.tscn" id="5_rfktq"]

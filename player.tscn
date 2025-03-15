@@ -141,3 +141,4 @@ animation = &"idle"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_hqtel")
+bus = &"SFX"
