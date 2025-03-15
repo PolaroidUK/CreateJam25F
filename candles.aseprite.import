@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dl4lk0yxwms6"
+path="res://.godot/imported/candles.aseprite-4c0afae647c038cf154c568607e4c02a.res"
+
+[deps]
+
+source_file="res://candles.aseprite"
+dest_files=["res://.godot/imported/candles.aseprite-4c0afae647c038cf154c568607e4c02a.res"]
+
+[params]
+

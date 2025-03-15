@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfxkxxfd53yrx"]
+[gd_scene load_steps=18 format=3 uid="uid://cfxkxxfd53yrx"]
 
 [ext_resource type="PackedScene" uid="uid://bupuwcp6l0iw3" path="res://Levels/baselevel.tscn" id="1_n0qsc"]
 [ext_resource type="PackedScene" uid="uid://cbws3t8oasyqw" path="res://Bookcase.tscn" id="2_dilhk"]
@@ -8,6 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://dnsufxk01eny5" path="res://ChairL.tscn" id="6_rfktq"]
 [ext_resource type="PackedScene" uid="uid://j2njj802rcoa" path="res://frog.tscn" id="7_0urlm"]
 [ext_resource type="PackedScene" uid="uid://cq3gl8jxsjt1i" path="res://bed.tscn" id="8_77x7w"]
+[ext_resource type="Texture2D" uid="uid://df06u8lsyh6ff" path="res://tempAssets/Objects/lamp.png" id="9_c7pbv"]
+[ext_resource type="Texture2D" uid="uid://dodikk7tqn166" path="res://tempAssets/Objects/candles.png" id="10_77l7m"]
+[ext_resource type="Texture2D" uid="uid://cpbwphdywy8yu" path="res://gustav/radial-light.png" id="11_1rr3k"]
+[ext_resource type="Texture2D" uid="uid://mi6p1vd1kr4q" path="res://tempAssets/Objects/Free_Chicken_House.png" id="12_hsj5a"]
+[ext_resource type="Texture2D" uid="uid://cg63h7rd3hn43" path="res://tempAssets/Objects/Basic_Grass_Biom_things.png" id="13_w38ni"]
+[ext_resource type="Texture2D" uid="uid://kuomo23pbfrq" path="res://tempAssets/Objects/Basic_Furniture.png" id="14_uclwg"]
+[ext_resource type="Texture2D" uid="uid://07ldqoqvue8b" path="res://tempAssets/Objects/Paths.png" id="15_8x6gh"]
+[ext_resource type="Texture2D" uid="uid://x8raqca1rcyd" path="res://tempAssets/Objects/Basic_Plants.png" id="16_442u8"]
+[ext_resource type="Texture2D" uid="uid://dtnhofjwloi7q" path="res://tempAssets/Objects/Basic_tools_and_meterials.png" id="17_fxl23"]
 
 [node name="level1" instance=ExtResource("1_n0qsc")]
 
@@ -42,3 +51,164 @@ position = Vector2(112, -16)
 
 [node name="bed" parent="." index="18" instance=ExtResource("8_77x7w")]
 position = Vector2(-32, -32)
+
+[node name="Lampe" type="Sprite2D" parent="." index="19"]
+position = Vector2(10.5625, -39.4375)
+scale = Vector2(1, 0.858)
+texture = ExtResource("9_c7pbv")
+
+[node name="Candles" type="Sprite2D" parent="." index="20"]
+position = Vector2(-32.5, 97)
+scale = Vector2(0.8125, 0.75)
+texture = ExtResource("10_77l7m")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Candles" index="0"]
+position = Vector2(0, -4)
+scale = Vector2(0.669073, 0.620061)
+color = Color(1, 0.564706, 0.0901961, 1)
+texture = ExtResource("11_1rr3k")
+texture_scale = 0.25
+height = 50.0
+
+[node name="FreeChickenHouse" type="Sprite2D" parent="." index="21"]
+position = Vector2(144, -32)
+texture = ExtResource("12_hsj5a")
+
+[node name="GardenFlower_red" type="Sprite2D" parent="." index="22"]
+position = Vector2(112, 96)
+texture = ExtResource("13_w38ni")
+region_enabled = true
+region_rect = Rect2(112, 48, 16, 16)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"output_section": false,
+"pending_changes": {
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": ""
+},
+"slice_section": false
+}
+
+[node name="BigTree" type="Sprite2D" parent="." index="23"]
+position = Vector2(112, -64)
+texture = ExtResource("13_w38ni")
+region_enabled = true
+region_rect = Rect2(16, 0, 32, 32)
+
+[node name="BigTree2" type="Sprite2D" parent="." index="24"]
+position = Vector2(-64, 32)
+texture = ExtResource("13_w38ni")
+region_enabled = true
+region_rect = Rect2(16, 0, 32, 32)
+
+[node name="BigTree3" type="Sprite2D" parent="." index="25"]
+position = Vector2(-96, -16)
+texture = ExtResource("13_w38ni")
+region_enabled = true
+region_rect = Rect2(16, 0, 32, 32)
+
+[node name="BigTree4" type="Sprite2D" parent="." index="26"]
+position = Vector2(-112, 96)
+texture = ExtResource("13_w38ni")
+region_enabled = true
+region_rect = Rect2(16, 0, 32, 32)
+
+[node name="TreeApple" type="Sprite2D" parent="." index="27"]
+position = Vector2(-64, -48)
+texture = ExtResource("13_w38ni")
+region_enabled = true
+region_rect = Rect2(48, 0, 32, 32)
+
+[node name="Sunflower" type="Sprite2D" parent="." index="28"]
+position = Vector2(176, -32)
+texture = ExtResource("13_w38ni")
+region_enabled = true
+region_rect = Rect2(128, 32, 16, 32)
+
+[node name="Clock" type="Sprite2D" parent="." index="29"]
+position = Vector2(48, -48)
+texture = ExtResource("14_uclwg")
+region_enabled = true
+region_rect = Rect2(96, 48, 16, 16)
+
+[node name="Table2" type="Sprite2D" parent="." index="30"]
+position = Vector2(80, 96)
+texture = ExtResource("14_uclwg")
+region_enabled = true
+region_rect = Rect2(48, 48, 16, 16)
+
+[node name="FlowerBlue" type="Sprite2D" parent="Table2" index="0"]
+position = Vector2(0, -4)
+texture = ExtResource("14_uclwg")
+region_enabled = true
+region_rect = Rect2(80, 0, 16, 16)
+
+[node name="Table3" type="Sprite2D" parent="." index="31"]
+position = Vector2(64, 96)
+texture = ExtResource("14_uclwg")
+region_enabled = true
+region_rect = Rect2(48, 48, 16, 16)
+
+[node name="FlowerYellow" type="Sprite2D" parent="Table3" index="0"]
+position = Vector2(-1, -6)
+texture = ExtResource("14_uclwg")
+region_enabled = true
+region_rect = Rect2(48, 0, 16, 16)
+
+[node name="Path" type="Sprite2D" parent="." index="32"]
+position = Vector2(112, 32)
+texture = ExtResource("15_8x6gh")
+region_enabled = true
+region_rect = Rect2(16, 48, 48, 16)
+
+[node name="Crops" type="Sprite2D" parent="." index="33"]
+position = Vector2(192, 96)
+texture = ExtResource("16_442u8")
+region_enabled = true
+region_rect = Rect2(48, 0, 16, 16)
+
+[node name="GardenFlower_blue" type="Sprite2D" parent="." index="34"]
+position = Vector2(144, 64)
+texture = ExtResource("13_w38ni")
+region_enabled = true
+region_rect = Rect2(80, 48, 16, 16)
+
+[node name="WateringCan" type="Sprite2D" parent="." index="35"]
+position = Vector2(48, 96)
+texture = ExtResource("17_fxl23")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="Bush" type="Sprite2D" parent="." index="36"]
+position = Vector2(-10, 121)
+texture = ExtResource("13_w38ni")
+region_enabled = true
+region_rect = Rect2(16, 48, 16, 16)
+
+[node name="Bush2" type="Sprite2D" parent="." index="37"]
+position = Vector2(-42, 121)
+texture = ExtResource("13_w38ni")
+region_enabled = true
+region_rect = Rect2(16, 48, 16, 16)
+
+[node name="Bush3" type="Sprite2D" parent="." index="38"]
+position = Vector2(6, 121)
+texture = ExtResource("13_w38ni")
+region_enabled = true
+region_rect = Rect2(16, 48, 16, 16)
+
+[node name="Bush_berry" type="Sprite2D" parent="." index="39"]
+position = Vector2(-26, 121)
+texture = ExtResource("13_w38ni")
+region_enabled = true
+region_rect = Rect2(0, 48, 16, 16)

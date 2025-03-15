@@ -28,11 +28,13 @@ func move(dir:Vector2):
 	if is_tile_free_direction(dir):
 		moving = true
 		moving_in_dir = dir;
+		$AudioStreamPlayer.play()
 		await tween_in_direction(dir).finished
 		for body in get_overlapping_areas():
 			if	body.has_method("eat"):
 				body.call("eat")
 		Gridmanager.StartMove.emit()
+		
 		movecount = movecount + 1
 	else:
 		var hit = ray.get_collider()
@@ -44,29 +46,29 @@ func move(dir:Vector2):
 func _unhandled_input(event):
 	if moving:
 		return
+	tryInputs()
+	
+				
+			
+func tryInputs():
 	for dir in inputs.keys():
-		if event.is_action_pressed(dir):
+		if Input.is_action_pressed(dir):
 			# show drunkness
 			if isDrunk && movecount%4==2:
 				material.set_shader_parameter("active", true);
 			else:
 				material.set_shader_parameter("active", false);
 			# do drunk move
+			
 			if isDrunk && movecount%4==3:
 				move(inputsflipped[dir])
 			else:
 				move(inputs[dir])
-				
 			
 func movementStoppedGlobaly():
 	moving = false	
 	moving_in_dir = Vector2.ZERO
-	for dir in inputs.keys():
-		if Input.is_action_pressed(dir):
-			if isDrunk && movecount%4==3:
-				move(inputsflipped[dir])
-			else:
-				move(inputs[dir])
+	tryInputs()
 
 func give_item(new_item:Area2D):
 	new_item.reparent(self)	

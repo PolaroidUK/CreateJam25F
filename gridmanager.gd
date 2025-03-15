@@ -29,4 +29,7 @@ func change_scene():
 	currentSceneVal = currentSceneVal + 1
 	get_tree().call_deferred("change_scene_to_file","res://Levels/level_" + str(currentSceneVal) +".tscn")
 	SceneChange.emit()
+	if currentSceneVal <=4:
+		pass
+		##AudioServer.set_bus_effect_enabled(0,currentSceneVal-2,true)
 	
