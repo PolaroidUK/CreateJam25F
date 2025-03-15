@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://brbrxlt1igfyc"]
+
+[ext_resource type="Script" uid="uid://bejnselo7s8ns" path="res://portal.gd" id="1_kqxth"]
+[ext_resource type="Texture2D" uid="uid://kuomo23pbfrq" path="res://tempAssets/Objects/Basic_Furniture.png" id="2_r2q6x"]
+[ext_resource type="AudioStream" uid="uid://u6ei8w8h604i" path="res://Audio/SFX/Teleport/teleport .wav" id="3_r2q6x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jq22o"]
+size = Vector2(8, 8)
+
+[node name="TileObject" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_kqxth")
+metadata/_custom_type_script = "uid://q7klohqhqguf"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jq22o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_r2q6x")
+region_enabled = true
+region_rect = Rect2(64, 80, 16, 16)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_r2q6x")

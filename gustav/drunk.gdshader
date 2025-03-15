@@ -8,4 +8,3 @@ void fragment() {
 		COLOR.rgb *= blue;
 	}
 }
-
