@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CreateJam25F"
-run/main_scene="uid://bm7cmf7yl7ram"
+run/main_scene="uid://cfxkxxfd53yrx"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -35,7 +35,7 @@ movie_writer/fps=12
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/script-ide/plugin.cfg")
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/script-ide/plugin.cfg")
 
 [input]
 
