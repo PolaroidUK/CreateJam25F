@@ -2,9 +2,9 @@
 
 [ext_resource type="TileSet" uid="uid://bpdfo1rq7jga2" path="res://Levels/tilesetWalls.tres" id="1_km01x"]
 [ext_resource type="PackedScene" uid="uid://iusubyg6sstx" path="res://player.tscn" id="2_a8ppn"]
-[ext_resource type="PackedScene" path="res://mushroom.tscn" id="3_5x5um"]
-[ext_resource type="Script" uid="uid://bk5ggkk16dokn" path="res://Levels/tile_map_layer.gd" id="3_fdr2b"]
-[ext_resource type="Shader" uid="uid://cfswc8ojncmtt" path="res://gustav/woble.gdshader" id="4_0tfn6"]
+[ext_resource type="PackedScene" uid="uid://ce2ua4lbmxno1" path="res://mushroom.tscn" id="3_5x5um"]
+[ext_resource type="Script" path="res://Levels/tile_map_layer.gd" id="3_fdr2b"]
+[ext_resource type="Shader" path="res://gustav/woble.gdshader" id="4_0tfn6"]
 [ext_resource type="Texture2D" uid="uid://cpbwphdywy8yu" path="res://gustav/radial-light.png" id="4_7rqa3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fdr2b"]

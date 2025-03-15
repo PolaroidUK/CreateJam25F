@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://dahuw3sgl16pq"]
+
+[ext_resource type="PackedScene" uid="uid://cjmpy2ow8iylv" path="res://Levels/level_6.tscn" id="1_bh5jb"]
+
+[node name="level" instance=ExtResource("1_bh5jb")]
+
+[node name="TileMapLayer2" parent="." index="0"]
+material = null
+script = null
+
+[node name="TileMapLayer3" parent="." index="1"]
+material = null
+script = null
+
+[node name="TileMapLayer" parent="." index="2"]
+material = null
+script = null
+
+[node name="Skuffe" parent="." index="4"]
+actions = []
+
+[node name="Skuffe2" parent="." index="5"]
+actions = []
+
+[node name="Chair" parent="." index="8"]
+actions = []
+
+[node name="Table" parent="." index="9"]
+actions = []
+
+[node name="Chair2" parent="." index="10"]
+actions = []
+
+[node name="Mushroom" parent="." index="12"]
+actions = []
+
+[node name="bed" parent="." index="18"]
+actions = [null, Vector2(176, -16), null, Vector2(80, 80), null, Vector2(-32, -32)]

@@ -11,9 +11,11 @@ func _tile_init() -> void:
 	
 func move():
 	var action = actions[currentActionIndex]
+	iterate_actions()
 	if	action == Vector2.ZERO:
-		iterate_actions()
 		return
+	if action.length()>1.5:
+		position = action
 	if is_tile_free_direction(action):
 		tween_in_direction(action)
 		
@@ -22,7 +24,7 @@ func move():
 		if (hit.has_method(pushMN)):
 			if hit.call(pushMN,action):
 				tween_in_direction(action)
-	iterate_actions()
+	
 				
 func iterate_actions():
 	currentActionIndex =currentActionIndex + 1

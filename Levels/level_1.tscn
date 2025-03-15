@@ -37,8 +37,8 @@ position = Vector2(16, 64)
 [node name="Mushroom" parent="." index="12"]
 nextLevelnumber = "2"
 
-[node name="TileObject" parent="." index="17" instance=ExtResource("7_0urlm")]
+[node name="frog" parent="." index="17" instance=ExtResource("7_0urlm")]
 position = Vector2(112, -16)
 
-[node name="TileObject2" parent="." index="18" instance=ExtResource("8_77x7w")]
+[node name="bed" parent="." index="18" instance=ExtResource("8_77x7w")]
 position = Vector2(-32, -32)

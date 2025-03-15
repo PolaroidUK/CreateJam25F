@@ -63,7 +63,10 @@ func movementStoppedGlobaly():
 	moving_in_dir = Vector2.ZERO
 	for dir in inputs.keys():
 		if Input.is_action_pressed(dir):
-			move(inputs[dir])
+			if isDrunk && movecount%4==3:
+				move(inputsflipped[dir])
+			else:
+				move(inputs[dir])
 
 func give_item(new_item:Area2D):
 	new_item.reparent(self)	

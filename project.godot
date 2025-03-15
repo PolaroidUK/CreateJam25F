@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Gridmanager="*res://gridmanager.gd"
+Music="*res://Levels/music.tscn"
 
 [display]
 
@@ -40,6 +41,7 @@ enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addon
 [file_customization]
 
 folder_colors={
+"res://Audio/": "yellow",
 "res://Levels/": "blue",
 "res://tempAssets/": "green"
 }
