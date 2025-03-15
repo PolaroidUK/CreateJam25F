@@ -37,6 +37,13 @@ movie_writer/fps=12
 
 enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/script-ide/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://Levels/": "blue",
+"res://tempAssets/": "green"
+}
+
 [input]
 
 move-up={

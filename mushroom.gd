@@ -9,5 +9,5 @@ func movementStoppedGlobaly():
 			
 			
 func eat():
-	get_tree().call_deferred("change_scene_to_file","res://Levels/level_" + nextLevelnumber +".tscn")
+	Gridmanager.change_scene()
 					
