@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bpdfo1rq7jga2"]
 
-[ext_resource type="Texture2D" uid="uid://2qvomqyrw4hy" path="res://tempAssets/Tilesets/Wooden_House_Walls_Tilset.png" id="1_1axc2"]
+[ext_resource type="Texture2D" uid="uid://dcas40ltrndco" path="res://gustav/walls.tres" id="1_1axc2"]
 [ext_resource type="Texture2D" uid="uid://kuomo23pbfrq" path="res://tempAssets/Objects/Basic_Furniture.png" id="2_ayvtm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fl65m"]

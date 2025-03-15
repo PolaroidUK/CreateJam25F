@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Gridmanager="*res://gridmanager.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="CreateJam25F"
