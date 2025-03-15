@@ -1,7 +1,7 @@
 extends Tile
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-var inputs = {"ui_right": Vector2.RIGHT,"ui_left": Vector2.LEFT,"ui_up": Vector2.UP,"ui_down": Vector2.DOWN}
+var inputs = {"move-right": Vector2.RIGHT,"move-left": Vector2.LEFT,"move-up": Vector2.UP,"move-down": Vector2.DOWN}
 
 var moving = false
 var moving_in_dir = Vector2.ZERO
