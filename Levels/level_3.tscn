@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpavx6vcpj0th"]
+
+[ext_resource type="PackedScene" uid="uid://dfmmw0u3s0c0e" path="res://Levels/level_2.tscn" id="1_cb8d3"]
+[ext_resource type="PackedScene" uid="uid://ci33ppe8r0e21" path="res://portal.tscn" id="2_5lru4"]
+
+[node name="level3" instance=ExtResource("1_cb8d3")]
+
+[node name="Mushroom" parent="." index="3"]
+position = Vector2(80, 32)
+
+[node name="TileObject" parent="." index="4" node_paths=PackedStringArray("partner_portal") instance=ExtResource("2_5lru4")]
+position = Vector2(32, 96)
+partner_portal = NodePath("../TileObject2")
+
+[node name="TileObject2" parent="." index="5" node_paths=PackedStringArray("partner_portal") instance=ExtResource("2_5lru4")]
+position = Vector2(80, -32)
+partner_portal = NodePath("../TileObject")

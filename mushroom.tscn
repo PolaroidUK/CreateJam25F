@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce2ua4lbmxno1"]
+
+[ext_resource type="Script" uid="uid://cxf1jire8iuu6" path="res://mushroom.gd" id="1_ke5i0"]
+[ext_resource type="Texture2D" uid="uid://cg63h7rd3hn43" path="res://tempAssets/Objects/Basic_Grass_Biom_things.png" id="2_pl5ep"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jg55k"]
+size = Vector2(8, 8)
+
+[node name="Mushroom" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_ke5i0")
+canPush = false
+metadata/_custom_type_script = "uid://q7klohqhqguf"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("2_pl5ep")
+region_enabled = true
+region_rect = Rect2(96, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jg55k")

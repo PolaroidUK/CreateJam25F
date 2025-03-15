@@ -4,8 +4,7 @@ var inputs = {"ui_right": Vector2.RIGHT,"ui_left": Vector2.LEFT,"ui_up": Vector2
 
 var moving = false
 
-func _setup():
-	Gridmanager.StopMove.connect(movementStoppedGlobaly)	
+
 
 func move(dir:Vector2):
 	if is_tile_free_direction(dir):
@@ -40,6 +39,10 @@ func take_item() -> Area2D:
 	var item_to_Give = item
 	item = null
 	return item_to_Give	
+	
+	
+func eat():
+	print("win")
 
 
 

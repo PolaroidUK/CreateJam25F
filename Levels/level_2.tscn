@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfmmw0u3s0c0e"]
+
+[ext_resource type="PackedScene" uid="uid://cfxkxxfd53yrx" path="res://Levels/level_1.tscn" id="1_ll1bl"]
+
+[node name="level2" instance=ExtResource("1_ll1bl")]
+
+[node name="Mushroom" parent="." index="3"]
+actions = [Vector2(-1, 0), Vector2(0, 1), Vector2(0, 1)]

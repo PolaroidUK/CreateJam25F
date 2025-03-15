@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfxkxxfd53yrx"]
+
+[ext_resource type="PackedScene" uid="uid://bupuwcp6l0iw3" path="res://Levels/baselevel.tscn" id="1_n0qsc"]
+
+[node name="level1" instance=ExtResource("1_n0qsc")]
+
+[connection signal="eat" from="Mushroom" to="." method="_on_mushroom_eat"]

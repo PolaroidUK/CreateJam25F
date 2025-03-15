@@ -8,6 +8,7 @@ size = Vector2(8, 8)
 
 [node name="TileObject" type="Area2D"]
 collision_layer = 0
+collision_mask = 7
 script = ExtResource("2_6r214")
 metadata/_custom_type_script = "uid://q7klohqhqguf"
 

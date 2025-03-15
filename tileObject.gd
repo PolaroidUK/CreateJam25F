@@ -3,9 +3,9 @@ extends Tile
 
 @export var actions = []
 var currentActionIndex = 0
-
+@export var canPush = true
 	
-func _tile_init() -> void:	
+func _tile_init() -> void:
 	if	actions.size()>0:
 		Gridmanager.StartMove.connect(move)
 	
@@ -13,13 +13,13 @@ func move():
 	var action = actions[currentActionIndex]
 	if is_tile_free_direction(action):
 		tween_in_direction(action)
-		iterate_actions()
-	else:
+		
+	elif canPush:
 		var hit = ray.get_collider()
 		if (hit.has_method(pushMN)):
 			if hit.call(pushMN,action):
 				tween_in_direction(action)
-				iterate_actions()
+	iterate_actions()
 				
 func iterate_actions():
 	currentActionIndex =currentActionIndex + 1

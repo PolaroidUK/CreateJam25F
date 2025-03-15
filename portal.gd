@@ -1,4 +1,5 @@
 class_name portal
+
 extends TileObject
 
 @export var partner_portal:portal

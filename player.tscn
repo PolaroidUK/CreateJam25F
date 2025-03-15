@@ -43,11 +43,13 @@ animations = [{
 }]
 
 [node name="Player" type="Area2D"]
+collision_layer = 2
 script = ExtResource("1_4flbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_i3pqv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 3
 sprite_frames = SubResource("SpriteFrames_sweqy")
 frame_progress = 0.988571
