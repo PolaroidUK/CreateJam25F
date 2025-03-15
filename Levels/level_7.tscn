@@ -1,38 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://dahuw3sgl16pq"]
+[gd_scene load_steps=3 format=3 uid="uid://dt32jguyplc26"]
 
 [ext_resource type="PackedScene" uid="uid://cjmpy2ow8iylv" path="res://Levels/level_6.tscn" id="1_bh5jb"]
+[ext_resource type="PackedScene" uid="uid://j2njj802rcoa" path="res://frog.tscn" id="2_3nw2h"]
 
 [node name="level" instance=ExtResource("1_bh5jb")]
 
-[node name="TileMapLayer2" parent="." index="0"]
-material = null
-script = null
+[node name="frog2" parent="." index="17" instance=ExtResource("2_3nw2h")]
+position = Vector2(-96, -48)
+actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="TileMapLayer3" parent="." index="1"]
-material = null
-script = null
+[node name="frog3" parent="." index="18" instance=ExtResource("2_3nw2h")]
+position = Vector2(-96, -32)
+actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="TileMapLayer" parent="." index="2"]
-material = null
-script = null
+[node name="frog4" parent="." index="19" instance=ExtResource("2_3nw2h")]
+position = Vector2(-96, -16)
+actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="Skuffe" parent="." index="4"]
-actions = []
+[node name="frog5" parent="." index="20" instance=ExtResource("2_3nw2h")]
+position = Vector2(-96, 0)
+actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="Skuffe2" parent="." index="5"]
-actions = []
+[node name="frog6" parent="." index="21" instance=ExtResource("2_3nw2h")]
+position = Vector2(-96, 16)
+actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="Chair" parent="." index="8"]
-actions = []
+[node name="frog7" parent="." index="22" instance=ExtResource("2_3nw2h")]
+position = Vector2(-96, 32)
+actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="Table" parent="." index="9"]
-actions = []
+[node name="frog8" parent="." index="23" instance=ExtResource("2_3nw2h")]
+position = Vector2(-96, 48)
+actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="Chair2" parent="." index="10"]
-actions = []
+[node name="frog9" parent="." index="24" instance=ExtResource("2_3nw2h")]
+position = Vector2(-96, 64)
+actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="Mushroom" parent="." index="12"]
-actions = []
+[node name="frog10" parent="." index="25" instance=ExtResource("2_3nw2h")]
+position = Vector2(-96, 80)
+actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="bed" parent="." index="18"]
-actions = [null, Vector2(176, -16), null, Vector2(80, 80), null, Vector2(-32, -32)]
+[node name="frog11" parent="." index="26" instance=ExtResource("2_3nw2h")]
+position = Vector2(-96, 96)
+actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]

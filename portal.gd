@@ -10,5 +10,6 @@ func movementStoppedGlobaly():
 		return
 	for body in get_overlapping_areas():
 		if	body.has_method("teleport"):
-			body.call("teleport",partner_portal.position) 			
+			body.call("teleport",partner_portal.position) 
+			$AudioStreamPlayer.play()			
 					

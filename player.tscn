@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://iusubyg6sstx"]
+[gd_scene load_steps=20 format=3 uid="uid://iusubyg6sstx"]
 
 [ext_resource type="Script" uid="uid://b5grbri3i4vc2" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="Shader" uid="uid://b37drul0m7oev" path="res://gustav/drunk.gdshader" id="1_i3pqv"]
-[ext_resource type="Texture2D" uid="uid://bvj7ml70luddt" path="res://gustav/player-sprites.tres" id="2_i3pqv"]
+[ext_resource type="Texture2D" path="res://gustav/player-sprites.tres" id="2_i3pqv"]
+[ext_resource type="AudioStream" uid="uid://cxbpy7nvow0wm" path="res://Audio/SFX/Footsteps/footsteps.wav" id="4_hqtel"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hqtel"]
 shader = ExtResource("1_i3pqv")
@@ -137,3 +138,6 @@ z_index = 3
 use_parent_material = true
 sprite_frames = SubResource("SpriteFrames_sweqy")
 animation = &"idle"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_hqtel")

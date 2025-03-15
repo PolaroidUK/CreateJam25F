@@ -1,4 +1,3 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfxkxxfd53yrx"]
 [gd_scene load_steps=18 format=3 uid="uid://cfxkxxfd53yrx"]
 
 [ext_resource type="PackedScene" uid="uid://bupuwcp6l0iw3" path="res://Levels/baselevel.tscn" id="1_n0qsc"]
@@ -47,18 +46,7 @@ position = Vector2(16, 64)
 [node name="Mushroom" parent="." index="12"]
 nextLevelnumber = "2"
 
-<<<<<<< Updated upstream
 [node name="frog" parent="." index="17" instance=ExtResource("7_0urlm")]
-=======
-[node name="CanvasModulate" parent="." index="15"]
-position = Vector2(19, -1)
-
-[node name="PointLight2D" parent="." index="16"]
-position = Vector2(9.5625, -46.4375)
-scale = Vector2(0.962006, 0.93769)
-
-[node name="TileObject" parent="." index="17" instance=ExtResource("7_0urlm")]
->>>>>>> Stashed changes
 position = Vector2(112, -16)
 
 [node name="bed" parent="." index="18" instance=ExtResource("8_77x7w")]
