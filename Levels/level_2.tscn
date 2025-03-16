@@ -1,9 +1,111 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfmmw0u3s0c0e"]
+[gd_scene load_steps=5 format=3 uid="uid://dfmmw0u3s0c0e"]
 
 [ext_resource type="PackedScene" uid="uid://cfxkxxfd53yrx" path="res://Levels/level_1.tscn" id="1_ll1bl"]
+[ext_resource type="Shader" uid="uid://cfswc8ojncmtt" path="res://gustav/woble.gdshader" id="2_arsda"]
+[ext_resource type="Script" uid="uid://bk5ggkk16dokn" path="res://Levels/tile_map_layer.gd" id="3_dgq3b"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bcgyv"]
+shader = ExtResource("2_arsda")
+shader_parameter/intensity = 0.0
 
 [node name="level2" instance=ExtResource("1_ll1bl")]
 
-[node name="Mushroom" parent="." index="3"]
+[node name="TileMapLayer2" parent="." index="0"]
+material = null
+script = null
+
+[node name="Mushroom" parent="." index="12"]
 nextLevelnumber = "3"
 actions = [Vector2(0, 1), Vector2(0, 1), Vector2(-1, 0)]
+
+[node name="Lampe" parent="." index="19"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="Candles" parent="." index="20"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="FreeChickenHouse" parent="." index="21"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="GardenFlower_red" parent="." index="22"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="BigTree" parent="." index="23"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="BigTree2" parent="." index="24"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="BigTree3" parent="." index="25"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="BigTree4" parent="." index="26"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="TreeApple" parent="." index="27"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="Sunflower" parent="." index="28"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="Clock" parent="." index="29"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="Table2" parent="." index="30"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="FlowerBlue" parent="Table2" index="0"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="Table3" parent="." index="31"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="FlowerYellow" parent="Table3" index="0"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="Path" parent="." index="32"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="Crops" parent="." index="33"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="GardenFlower_blue" parent="." index="34"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="WateringCan" parent="." index="35"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="Bush" parent="." index="36"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="Bush2" parent="." index="37"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="Bush3" parent="." index="38"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")
+
+[node name="Bush_berry" parent="." index="39"]
+material = SubResource("ShaderMaterial_bcgyv")
+script = ExtResource("3_dgq3b")

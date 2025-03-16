@@ -1,14 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://booc0sdy1r53j"]
+[gd_scene load_steps=2 format=3 uid="uid://kmekvok5pqsd"]
 
 [ext_resource type="PackedScene" uid="uid://bt4lhp8j3jukj" path="res://Levels/level_4.tscn" id="1_t3h5c"]
 
 [node name="level" instance=ExtResource("1_t3h5c")]
-
-[node name="Mushroom" parent="." index="3"]
-nextLevelnumber = "6"
 
 [node name="Skuffe" parent="." index="4"]
 actions = [null, Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1)]
 
 [node name="Skuffe2" parent="." index="5"]
 actions = [Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1)]
+
+[node name="Mushroom" parent="." index="12"]
+nextLevelnumber = "6"

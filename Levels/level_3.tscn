@@ -4,11 +4,11 @@
 
 [node name="level3" instance=ExtResource("1_cb8d3")]
 
-[node name="Mushroom" parent="." index="3"]
-nextLevelnumber = "4"
-
 [node name="portal1" parent="." index="6"]
 isActive = true
 
 [node name="poratl2" parent="." index="7"]
 isActive = true
+
+[node name="Mushroom" parent="." index="12"]
+nextLevelnumber = "4"

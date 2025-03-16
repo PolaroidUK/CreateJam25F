@@ -1,7 +1,7 @@
-extends TileMapLayer
+extends CanvasItem
 
 static var fkd: float = 0.0
-var increase: float = 0.05
+var increase: float = 0.005
 
 func _ready() -> void:
 	material.set_shader_parameter("intensity", fkd)

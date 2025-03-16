@@ -1,11 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjmpy2ow8iylv"]
+[gd_scene load_steps=2 format=3 uid="uid://8oddq61np4ea"]
 
-[ext_resource type="PackedScene" uid="uid://booc0sdy1r53j" path="res://Levels/level_5.tscn" id="1_r2npx"]
+[ext_resource type="PackedScene" uid="uid://kmekvok5pqsd" path="res://Levels/level_5.tscn" id="1_r2npx"]
 
 [node name="level" instance=ExtResource("1_r2npx")]
-
-[node name="Mushroom" parent="." index="3"]
-nextLevelnumber = "1"
 
 [node name="Chair" parent="." index="8"]
 actions = [Vector2(0, -1), Vector2(1, 0), Vector2(0, -1), Vector2(0, 1), Vector2(-1, 0), Vector2(0, 1)]
@@ -15,3 +12,7 @@ actions = [Vector2(0, 1), Vector2(0, 1), Vector2(-1, 0), Vector2(-1, 0)]
 
 [node name="Chair2" parent="." index="10"]
 actions = [Vector2(1, 0), Vector2(1, 0), Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0), Vector2(-1, 0), Vector2(-1, 0)]
+
+[node name="Mushroom" parent="." index="12"]
+material = null
+nextLevelnumber = "1"

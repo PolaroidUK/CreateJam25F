@@ -1,11 +1,97 @@
-[gd_scene load_steps=2 format=3 uid="uid://bt4lhp8j3jukj"]
+[gd_scene load_steps=5 format=3 uid="uid://bt4lhp8j3jukj"]
 
 [ext_resource type="PackedScene" uid="uid://cpavx6vcpj0th" path="res://Levels/level_3.tscn" id="1_ftfcu"]
+[ext_resource type="Shader" uid="uid://cfswc8ojncmtt" path="res://gustav/woble.gdshader" id="2_nsqb1"]
+[ext_resource type="Script" uid="uid://cxf1jire8iuu6" path="res://mushroom.gd" id="2_t60mx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ujo87"]
+shader = ExtResource("2_nsqb1")
+shader_parameter/intensity = 0.0
 
 [node name="level" instance=ExtResource("1_ftfcu")]
 
-[node name="Player" parent="." index="2"]
+[node name="portal1" parent="." index="6"]
+position = Vector2(160, 96)
+
+[node name="poratl2" parent="." index="7" node_paths=PackedStringArray("partner_portal")]
+position = Vector2(80, -32)
+partner_portal = NodePath("../portal1")
+
+[node name="Player" parent="." index="11"]
 isDrunk = true
 
-[node name="Mushroom" parent="." index="3"]
+[node name="Mushroom" parent="." index="12"]
+position = Vector2(192, 16)
+script = ExtResource("2_t60mx")
 nextLevelnumber = "5"
+
+[node name="Lampe" parent="." index="19"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="Candles" parent="." index="20"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="FreeChickenHouse" parent="." index="21"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="GardenFlower_red" parent="." index="22"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="BigTree" parent="." index="23"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="BigTree2" parent="." index="24"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="BigTree3" parent="." index="25"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="BigTree4" parent="." index="26"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="TreeApple" parent="." index="27"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="Sunflower" parent="." index="28"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="Clock" parent="." index="29"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="Table2" parent="." index="30"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="FlowerBlue" parent="Table2" index="0"]
+material = null
+script = null
+
+[node name="Table3" parent="." index="31"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="FlowerYellow" parent="Table3" index="0"]
+material = null
+script = null
+
+[node name="Path" parent="." index="32"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="Crops" parent="." index="33"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="GardenFlower_blue" parent="." index="34"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="WateringCan" parent="." index="35"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="Bush" parent="." index="36"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="Bush2" parent="." index="37"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="Bush3" parent="." index="38"]
+material = SubResource("ShaderMaterial_ujo87")
+
+[node name="Bush_berry" parent="." index="39"]
+material = SubResource("ShaderMaterial_ujo87")

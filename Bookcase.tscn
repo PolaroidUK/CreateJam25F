@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbws3t8oasyqw"]
+[gd_scene load_steps=7 format=3 uid="uid://08xmu1jcy1th"]
 
 [ext_resource type="Script" uid="uid://q7klohqhqguf" path="res://tileObject.gd" id="1_wpgj2"]
+[ext_resource type="Shader" uid="uid://cfswc8ojncmtt" path="res://gustav/woble.gdshader" id="2_4jljt"]
 [ext_resource type="Texture2D" uid="uid://kuomo23pbfrq" path="res://tempAssets/Objects/Basic_Furniture.png" id="2_06hkm"]
+[ext_resource type="Script" uid="uid://bk5ggkk16dokn" path="res://Levels/tile_map_layer.gd" id="4_ualv5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4jljt"]
 size = Vector2(16, 16)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mvudq"]
+shader = ExtResource("2_4jljt")
+shader_parameter/intensity = 0.0
 
 [node name="TileObject" type="Area2D"]
 script = ExtResource("1_wpgj2")
@@ -14,6 +20,8 @@ metadata/_custom_type_script = "uid://q7klohqhqguf"
 shape = SubResource("RectangleShape2D_4jljt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_mvudq")
 texture = ExtResource("2_06hkm")
 region_enabled = true
 region_rect = Rect2(48, 32, 16, 16)
+script = ExtResource("4_ualv5")
