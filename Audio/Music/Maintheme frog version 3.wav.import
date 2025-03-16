@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bwwuds3emimfk"
+path="res://.godot/imported/Maintheme frog version 3.wav-0d06b60d94bf076dcbd33b3e3dee2901.sample"
+
+[deps]
+
+source_file="res://Audio/Music/Maintheme frog version 3.wav"
+dest_files=["res://.godot/imported/Maintheme frog version 3.wav-0d06b60d94bf076dcbd33b3e3dee2901.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
