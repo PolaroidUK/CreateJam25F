@@ -1,0 +1,287 @@
+[gd_scene load_steps=3 format=3 uid="uid://6e42k6870kr3"]
+
+[ext_resource type="PackedScene" uid="uid://dt32jguyplc26" path="res://Levels/level_7.tscn" id="1_dfxo2"]
+[ext_resource type="PackedScene" uid="uid://b8eielmvlw470" path="res://decoyMushroom.tscn" id="2_cefe7"]
+
+[node name="level" instance=ExtResource("1_dfxo2")]
+
+[node name="TileObject5" parent="." index="4"]
+actions = []
+
+[node name="TileObject6" parent="." index="52" instance=ExtResource("2_cefe7")]
+position = Vector2(-32, 80)
+
+[node name="TileObject7" parent="." index="53" instance=ExtResource("2_cefe7")]
+position = Vector2(-16, 80)
+
+[node name="TileObject8" parent="." index="54" instance=ExtResource("2_cefe7")]
+position = Vector2(0, 80)
+
+[node name="TileObject9" parent="." index="55" instance=ExtResource("2_cefe7")]
+position = Vector2(16, 80)
+
+[node name="TileObject10" parent="." index="56" instance=ExtResource("2_cefe7")]
+position = Vector2(32, 80)
+
+[node name="TileObject11" parent="." index="57" instance=ExtResource("2_cefe7")]
+position = Vector2(48, 80)
+
+[node name="TileObject12" parent="." index="58" instance=ExtResource("2_cefe7")]
+position = Vector2(64, 80)
+
+[node name="TileObject13" parent="." index="59" instance=ExtResource("2_cefe7")]
+position = Vector2(80, 80)
+
+[node name="TileObject14" parent="." index="60" instance=ExtResource("2_cefe7")]
+position = Vector2(32, 64)
+
+[node name="TileObject15" parent="." index="61" instance=ExtResource("2_cefe7")]
+position = Vector2(48, 64)
+
+[node name="TileObject16" parent="." index="62" instance=ExtResource("2_cefe7")]
+position = Vector2(64, 64)
+
+[node name="TileObject17" parent="." index="63" instance=ExtResource("2_cefe7")]
+position = Vector2(80, 64)
+
+[node name="TileObject18" parent="." index="64" instance=ExtResource("2_cefe7")]
+position = Vector2(32, 48)
+
+[node name="TileObject19" parent="." index="65" instance=ExtResource("2_cefe7")]
+position = Vector2(48, 48)
+
+[node name="TileObject20" parent="." index="66" instance=ExtResource("2_cefe7")]
+position = Vector2(64, 48)
+
+[node name="TileObject21" parent="." index="67" instance=ExtResource("2_cefe7")]
+position = Vector2(80, 48)
+
+[node name="TileObject22" parent="." index="68" instance=ExtResource("2_cefe7")]
+position = Vector2(-32, 48)
+
+[node name="TileObject23" parent="." index="69" instance=ExtResource("2_cefe7")]
+position = Vector2(-16, 48)
+
+[node name="TileObject24" parent="." index="70" instance=ExtResource("2_cefe7")]
+position = Vector2(0, 48)
+
+[node name="TileObject25" parent="." index="71" instance=ExtResource("2_cefe7")]
+position = Vector2(16, 48)
+
+[node name="TileObject26" parent="." index="72" instance=ExtResource("2_cefe7")]
+position = Vector2(-16, 32)
+
+[node name="TileObject27" parent="." index="73" instance=ExtResource("2_cefe7")]
+position = Vector2(0, 32)
+
+[node name="TileObject28" parent="." index="74" instance=ExtResource("2_cefe7")]
+position = Vector2(16, 32)
+
+[node name="TileObject29" parent="." index="75" instance=ExtResource("2_cefe7")]
+position = Vector2(32, 32)
+
+[node name="TileObject30" parent="." index="76" instance=ExtResource("2_cefe7")]
+position = Vector2(-32, 16)
+
+[node name="TileObject31" parent="." index="77" instance=ExtResource("2_cefe7")]
+position = Vector2(-16, 16)
+
+[node name="TileObject32" parent="." index="78" instance=ExtResource("2_cefe7")]
+position = Vector2(0, 16)
+
+[node name="TileObject33" parent="." index="79" instance=ExtResource("2_cefe7")]
+position = Vector2(16, 16)
+
+[node name="TileObject34" parent="." index="80" instance=ExtResource("2_cefe7")]
+position = Vector2(32, 16)
+
+[node name="TileObject35" parent="." index="81" instance=ExtResource("2_cefe7")]
+position = Vector2(48, 16)
+
+[node name="TileObject36" parent="." index="82" instance=ExtResource("2_cefe7")]
+position = Vector2(64, 16)
+
+[node name="TileObject37" parent="." index="83" instance=ExtResource("2_cefe7")]
+position = Vector2(80, 16)
+
+[node name="TileObject38" parent="." index="84" instance=ExtResource("2_cefe7")]
+position = Vector2(-32, 0)
+
+[node name="TileObject39" parent="." index="85" instance=ExtResource("2_cefe7")]
+position = Vector2(-16, 0)
+
+[node name="TileObject40" parent="." index="86" instance=ExtResource("2_cefe7")]
+
+[node name="TileObject41" parent="." index="87" instance=ExtResource("2_cefe7")]
+position = Vector2(16, 0)
+
+[node name="TileObject42" parent="." index="88" instance=ExtResource("2_cefe7")]
+position = Vector2(32, 0)
+
+[node name="TileObject43" parent="." index="89" instance=ExtResource("2_cefe7")]
+position = Vector2(48, 0)
+
+[node name="TileObject44" parent="." index="90" instance=ExtResource("2_cefe7")]
+position = Vector2(64, 0)
+
+[node name="TileObject45" parent="." index="91" instance=ExtResource("2_cefe7")]
+position = Vector2(80, 0)
+
+[node name="TileObject46" parent="." index="92" instance=ExtResource("2_cefe7")]
+position = Vector2(32, -16)
+
+[node name="TileObject47" parent="." index="93" instance=ExtResource("2_cefe7")]
+position = Vector2(48, -16)
+
+[node name="TileObject48" parent="." index="94" instance=ExtResource("2_cefe7")]
+position = Vector2(64, -16)
+
+[node name="TileObject49" parent="." index="95" instance=ExtResource("2_cefe7")]
+position = Vector2(80, -16)
+
+[node name="TileObject50" parent="." index="96" instance=ExtResource("2_cefe7")]
+position = Vector2(112, 0)
+
+[node name="TileObject51" parent="." index="97" instance=ExtResource("2_cefe7")]
+position = Vector2(128, 0)
+
+[node name="TileObject52" parent="." index="98" instance=ExtResource("2_cefe7")]
+position = Vector2(144, 0)
+
+[node name="TileObject53" parent="." index="99" instance=ExtResource("2_cefe7")]
+position = Vector2(160, 0)
+
+[node name="TileObject54" parent="." index="100" instance=ExtResource("2_cefe7")]
+position = Vector2(96, 16)
+
+[node name="TileObject55" parent="." index="101" instance=ExtResource("2_cefe7")]
+position = Vector2(112, 16)
+
+[node name="TileObject56" parent="." index="102" instance=ExtResource("2_cefe7")]
+position = Vector2(128, 16)
+
+[node name="TileObject57" parent="." index="103" instance=ExtResource("2_cefe7")]
+position = Vector2(144, 16)
+
+[node name="TileObject58" parent="." index="104" instance=ExtResource("2_cefe7")]
+position = Vector2(96, 48)
+
+[node name="TileObject59" parent="." index="105" instance=ExtResource("2_cefe7")]
+position = Vector2(112, 48)
+
+[node name="TileObject60" parent="." index="106" instance=ExtResource("2_cefe7")]
+position = Vector2(128, 48)
+
+[node name="TileObject61" parent="." index="107" instance=ExtResource("2_cefe7")]
+position = Vector2(144, 48)
+
+[node name="TileObject62" parent="." index="108" instance=ExtResource("2_cefe7")]
+position = Vector2(96, 80)
+
+[node name="TileObject63" parent="." index="109" instance=ExtResource("2_cefe7")]
+position = Vector2(112, 80)
+
+[node name="TileObject64" parent="." index="110" instance=ExtResource("2_cefe7")]
+position = Vector2(128, 80)
+
+[node name="TileObject65" parent="." index="111" instance=ExtResource("2_cefe7")]
+position = Vector2(144, 80)
+
+[node name="TileObject66" parent="." index="112" instance=ExtResource("2_cefe7")]
+position = Vector2(144, 32)
+
+[node name="TileObject67" parent="." index="113" instance=ExtResource("2_cefe7")]
+position = Vector2(160, 32)
+
+[node name="TileObject68" parent="." index="114" instance=ExtResource("2_cefe7")]
+position = Vector2(176, 32)
+
+[node name="TileObject69" parent="." index="115" instance=ExtResource("2_cefe7")]
+position = Vector2(192, 32)
+
+[node name="TileObject70" parent="." index="116" instance=ExtResource("2_cefe7")]
+position = Vector2(144, 48)
+
+[node name="TileObject71" parent="." index="117" instance=ExtResource("2_cefe7")]
+position = Vector2(160, 48)
+
+[node name="TileObject72" parent="." index="118" instance=ExtResource("2_cefe7")]
+position = Vector2(176, 48)
+
+[node name="TileObject73" parent="." index="119" instance=ExtResource("2_cefe7")]
+position = Vector2(192, 48)
+
+[node name="TileObject74" parent="." index="120" instance=ExtResource("2_cefe7")]
+position = Vector2(128, 96)
+
+[node name="TileObject78" parent="." index="121" instance=ExtResource("2_cefe7")]
+position = Vector2(144, 96)
+
+[node name="TileObject79" parent="." index="122" instance=ExtResource("2_cefe7")]
+position = Vector2(96, 96)
+
+[node name="TileObject80" parent="." index="123" instance=ExtResource("2_cefe7")]
+position = Vector2(96, 64)
+
+[node name="TileObject81" parent="." index="124" instance=ExtResource("2_cefe7")]
+position = Vector2(112, 64)
+
+[node name="TileObject82" parent="." index="125" instance=ExtResource("2_cefe7")]
+position = Vector2(128, 64)
+
+[node name="TileObject83" parent="." index="126" instance=ExtResource("2_cefe7")]
+position = Vector2(160, 64)
+
+[node name="TileObject84" parent="." index="127" instance=ExtResource("2_cefe7")]
+position = Vector2(176, 64)
+
+[node name="TileObject85" parent="." index="128" instance=ExtResource("2_cefe7")]
+position = Vector2(192, 64)
+
+[node name="TileObject86" parent="." index="129" instance=ExtResource("2_cefe7")]
+position = Vector2(176, 16)
+
+[node name="TileObject87" parent="." index="130" instance=ExtResource("2_cefe7")]
+position = Vector2(160, 16)
+
+[node name="TileObject88" parent="." index="131" instance=ExtResource("2_cefe7")]
+position = Vector2(176, 0)
+
+[node name="TileObject89" parent="." index="132" instance=ExtResource("2_cefe7")]
+position = Vector2(192, 0)
+
+[node name="TileObject90" parent="." index="133" instance=ExtResource("2_cefe7")]
+position = Vector2(192, -16)
+
+[node name="TileObject91" parent="." index="134" instance=ExtResource("2_cefe7")]
+position = Vector2(96, 0)
+
+[node name="TileObject92" parent="." index="135" instance=ExtResource("2_cefe7")]
+position = Vector2(96, -16)
+
+[node name="TileObject93" parent="." index="136" instance=ExtResource("2_cefe7")]
+position = Vector2(16, -16)
+
+[node name="TileObject94" parent="." index="137" instance=ExtResource("2_cefe7")]
+position = Vector2(0, -16)
+
+[node name="TileObject95" parent="." index="138" instance=ExtResource("2_cefe7")]
+position = Vector2(-16, -16)
+
+[node name="TileObject96" parent="." index="139" instance=ExtResource("2_cefe7")]
+position = Vector2(-16, -32)
+
+[node name="TileObject97" parent="." index="140" instance=ExtResource("2_cefe7")]
+position = Vector2(-32, 64)
+
+[node name="TileObject98" parent="." index="141" instance=ExtResource("2_cefe7")]
+position = Vector2(80, 32)
+
+[node name="TileObject75" parent="." index="142" instance=ExtResource("2_cefe7")]
+position = Vector2(160, 80)
+
+[node name="TileObject76" parent="." index="143" instance=ExtResource("2_cefe7")]
+position = Vector2(176, 80)
+
+[node name="TileObject77" parent="." index="144" instance=ExtResource("2_cefe7")]
+position = Vector2(192, 80)

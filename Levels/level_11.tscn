@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqcnwbncv80tx"]
+
+[ext_resource type="PackedScene" uid="uid://dt32jguyplc26" path="res://Levels/level_7.tscn" id="1_yvn58"]
+[ext_resource type="Script" uid="uid://b82pihaxxm5ie" path="res://tripmovement.gd" id="2_5qrgj"]
+
+[node name="level" instance=ExtResource("1_yvn58")]
+
+[node name="Camera2D" parent="." index="4"]
+rotation = 3.14159
+ignore_rotation = false
+
+[node name="BigTree3" parent="." index="37"]
+script = ExtResource("2_5qrgj")
+
+[node name="TreeApple" parent="." index="39"]
+script = ExtResource("2_5qrgj")
+
+[node name="Sunflower" parent="." index="40"]
+script = ExtResource("2_5qrgj")
+
+[node name="Clock" parent="." index="41"]
+script = ExtResource("2_5qrgj")
+
+[node name="Path" parent="." index="44"]
+script = ExtResource("2_5qrgj")
+
+[node name="WateringCan" parent="." index="46"]
+script = ExtResource("2_5qrgj")

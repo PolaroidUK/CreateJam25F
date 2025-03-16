@@ -1,0 +1,84 @@
+[gd_scene load_steps=10 format=3 uid="uid://dje40y8y2b2no"]
+
+[ext_resource type="PackedScene" uid="uid://dt32jguyplc26" path="res://Levels/level_7.tscn" id="1_aab6h"]
+[ext_resource type="Texture2D" uid="uid://cg63h7rd3hn43" path="res://tempAssets/Objects/Basic_Grass_Biom_things.png" id="2_4y126"]
+[ext_resource type="Texture2D" uid="uid://bgm5btdg3qqhu" path="res://tempAssets/Characters/Basic Charakter Spritesheet.png" id="3_7i33c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xx8ku"]
+atlas = ExtResource("2_4y126")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a721k"]
+atlas = ExtResource("2_4y126")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7amt0"]
+atlas = ExtResource("2_4y126")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5e11"]
+atlas = ExtResource("2_4y126")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3b7f"]
+atlas = ExtResource("2_4y126")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aie2w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xx8ku")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a721k")
+}],
+"loop": true,
+"name": &"run_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7amt0")
+}],
+"loop": true,
+"name": &"run_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5e11")
+}],
+"loop": true,
+"name": &"run_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3b7f")
+}],
+"loop": true,
+"name": &"run_up",
+"speed": 5.0
+}]
+
+[node name="level" instance=ExtResource("1_aab6h")]
+
+[node name="AnimatedSprite2D" parent="Player" index="1"]
+sprite_frames = SubResource("SpriteFrames_aie2w")
+animation = &"run_up"
+
+[node name="Sprite2D" parent="Mushroom" index="0"]
+texture = ExtResource("3_7i33c")
+region_rect = Rect2(16, 16, 16, 16)
+
+[node name="Bush_berry" parent="." index="50"]
+position = Vector2(-26, 121)
+
+[editable path="Player"]
+[editable path="Mushroom"]

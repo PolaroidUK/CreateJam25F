@@ -1,46 +1,106 @@
-[gd_scene load_steps=3 format=3 uid="uid://dt32jguyplc26"]
+[gd_scene load_steps=4 format=3 uid="uid://dt32jguyplc26"]
 
 [ext_resource type="PackedScene" uid="uid://cjmpy2ow8iylv" path="res://Levels/level_6.tscn" id="1_bh5jb"]
 [ext_resource type="PackedScene" uid="uid://j2njj802rcoa" path="res://frog.tscn" id="2_3nw2h"]
+[ext_resource type="Texture2D" uid="uid://cg63h7rd3hn43" path="res://tempAssets/Objects/Basic_Grass_Biom_things.png" id="3_74s8n"]
 
 [node name="level" instance=ExtResource("1_bh5jb")]
 
-[node name="frog2" parent="." index="17" instance=ExtResource("2_3nw2h")]
-position = Vector2(-96, -48)
-actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
+[node name="TileObject5" parent="." index="4"]
+actions = []
 
-[node name="frog3" parent="." index="18" instance=ExtResource("2_3nw2h")]
+[node name="Skuffe" parent="." index="5"]
+material = null
+position = Vector2(32, -32)
+
+[node name="Skuffe2" parent="." index="6"]
+position = Vector2(48, -32)
+
+[node name="poratl2" parent="." index="8"]
+position = Vector2(80, -32)
+
+[node name="frog3" parent="." index="9" instance=ExtResource("2_3nw2h")]
 position = Vector2(-96, -32)
 actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="frog4" parent="." index="19" instance=ExtResource("2_3nw2h")]
+[node name="frog4" parent="." index="10" instance=ExtResource("2_3nw2h")]
 position = Vector2(-96, -16)
 actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="frog5" parent="." index="20" instance=ExtResource("2_3nw2h")]
+[node name="frog5" parent="." index="11" instance=ExtResource("2_3nw2h")]
 position = Vector2(-96, 0)
 actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="frog6" parent="." index="21" instance=ExtResource("2_3nw2h")]
+[node name="frog6" parent="." index="12" instance=ExtResource("2_3nw2h")]
 position = Vector2(-96, 16)
 actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="frog7" parent="." index="22" instance=ExtResource("2_3nw2h")]
-position = Vector2(-96, 32)
-actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
-
-[node name="frog8" parent="." index="23" instance=ExtResource("2_3nw2h")]
+[node name="frog8" parent="." index="13" instance=ExtResource("2_3nw2h")]
 position = Vector2(-96, 48)
 actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="frog9" parent="." index="24" instance=ExtResource("2_3nw2h")]
+[node name="frog9" parent="." index="14" instance=ExtResource("2_3nw2h")]
 position = Vector2(-96, 64)
 actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="frog10" parent="." index="25" instance=ExtResource("2_3nw2h")]
+[node name="frog10" parent="." index="15" instance=ExtResource("2_3nw2h")]
 position = Vector2(-96, 80)
 actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
-[node name="frog11" parent="." index="26" instance=ExtResource("2_3nw2h")]
+[node name="frog11" parent="." index="16" instance=ExtResource("2_3nw2h")]
 position = Vector2(-96, 96)
 actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
+
+[node name="Chair" parent="." index="17"]
+position = Vector2(-16, 64)
+
+[node name="Table" parent="." index="18"]
+position = Vector2(0, 64)
+
+[node name="Chair2" parent="." index="19"]
+position = Vector2(16, 64)
+
+[node name="Player" parent="." index="20"]
+position = Vector2(-32, 32)
+
+[node name="Mushroom" parent="." index="21"]
+position = Vector2(192, 16)
+
+[node name="GardenFlower_red" type="Sprite2D" parent="." index="30"]
+position = Vector2(112, 96)
+texture = ExtResource("3_74s8n")
+region_enabled = true
+region_rect = Rect2(112, 48, 16, 16)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"output_section": false,
+"pending_changes": {
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": ""
+},
+"slice_section": false
+}
+
+[node name="TileObject4" parent="." index="32"]
+actions = [Vector2(144, 64), Vector2(112, 96)]
+
+[node name="TileObject3" parent="." index="33"]
+actions = [Vector2(112, 96), Vector2(144, 64)]
+
+[node name="TileObject" parent="." index="50"]
+isActive = true
+actions = [Vector2(0, -1), Vector2(0, -1), Vector2(-1, 0), Vector2(-1, 0), Vector2(1, 0), Vector2(1, 0), Vector2(0, 1), Vector2(0, 1), null, null]
+
+[node name="TileObject2" parent="." index="51"]
+isActive = true
+actions = [Vector2(0, 1), Vector2(0, 1), Vector2(0, -1), Vector2(0, -1)]
