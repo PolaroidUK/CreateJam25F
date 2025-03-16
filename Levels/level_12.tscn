@@ -1,17 +1,18 @@
-[gd_scene load_steps=27 format=4 uid="uid://bxdedmw5cbotq"]
+[gd_scene load_steps=28 format=4 uid="uid://bxdedmw5cbotq"]
 
 [ext_resource type="PackedScene" uid="uid://bupuwcp6l0iw3" path="res://Levels/baselevel.tscn" id="1_mphk1"]
-[ext_resource type="Shader" path="res://gustav/woble.gdshader" id="2_gwckx"]
+[ext_resource type="Shader" uid="uid://cfswc8ojncmtt" path="res://gustav/woble.gdshader" id="2_gwckx"]
 [ext_resource type="TileSet" uid="uid://bpdfo1rq7jga2" path="res://Levels/tilesetWalls.tres" id="3_0rxtw"]
 [ext_resource type="Script" uid="uid://q7klohqhqguf" path="res://tileObject.gd" id="4_tejkj"]
-[ext_resource type="PackedScene" uid="uid://cbws3t8oasyqw" path="res://Bookcase.tscn" id="5_2a6qp"]
+[ext_resource type="PackedScene" uid="uid://08xmu1jcy1th" path="res://Bookcase.tscn" id="5_2a6qp"]
 [ext_resource type="PackedScene" uid="uid://ci33ppe8r0e21" path="res://portal.tscn" id="6_3bwkj"]
-[ext_resource type="PackedScene" uid="uid://b30yt8tjhkgd3" path="res://ChairR.tscn" id="7_gchi3"]
+[ext_resource type="PackedScene" uid="uid://badet3thqo0mu" path="res://ChairR.tscn" id="7_gchi3"]
 [ext_resource type="PackedScene" uid="uid://bvsqsjw5ralnb" path="res://Table.tscn" id="8_o03jv"]
 [ext_resource type="PackedScene" uid="uid://dnsufxk01eny5" path="res://ChairL.tscn" id="9_wjqse"]
 [ext_resource type="PackedScene" uid="uid://j2njj802rcoa" path="res://frog.tscn" id="10_i41kq"]
 [ext_resource type="PackedScene" uid="uid://cq3gl8jxsjt1i" path="res://bed.tscn" id="11_urvfk"]
 [ext_resource type="Texture2D" uid="uid://df06u8lsyh6ff" path="res://tempAssets/Objects/lamp.png" id="12_ecm5h"]
+[ext_resource type="Script" uid="uid://ds5fnd3d6qh6k" path="res://bed.gd" id="12_gwckx"]
 [ext_resource type="Texture2D" uid="uid://dodikk7tqn166" path="res://tempAssets/Objects/candles.png" id="13_dg2tf"]
 [ext_resource type="Texture2D" uid="uid://cpbwphdywy8yu" path="res://gustav/radial-light.png" id="14_s1err"]
 [ext_resource type="Texture2D" uid="uid://mi6p1vd1kr4q" path="res://tempAssets/Objects/Free_Chicken_House.png" id="15_san4l"]
@@ -20,8 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://07ldqoqvue8b" path="res://tempAssets/Objects/Paths.png" id="18_d46l5"]
 [ext_resource type="Texture2D" uid="uid://x8raqca1rcyd" path="res://tempAssets/Objects/Basic_Plants.png" id="19_mvrlj"]
 [ext_resource type="Texture2D" uid="uid://dtnhofjwloi7q" path="res://tempAssets/Objects/Basic_tools_and_meterials.png" id="20_3twvr"]
-[ext_resource type="PackedScene" uid="uid://dms57su470cdm" path="res://leftRug.tscn" id="21_msqvg"]
-[ext_resource type="PackedScene" uid="uid://brbrxlt1igfyc" path="res://rightrug.tscn" id="22_3ffsv"]
+[ext_resource type="PackedScene" path="res://leftRug.tscn" id="21_msqvg"]
+[ext_resource type="PackedScene" path="res://rightrug.tscn" id="22_3ffsv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fdr2b"]
 shader = ExtResource("2_gwckx")
@@ -76,6 +77,7 @@ position = Vector2(0, 64)
 position = Vector2(16, 64)
 
 [node name="Mushroom" parent="." index="14"]
+position = Vector2(224, 16)
 nextLevelnumber = "2"
 
 [node name="frog" parent="." index="19" instance=ExtResource("10_i41kq")]
@@ -83,6 +85,14 @@ position = Vector2(112, -16)
 
 [node name="bed" parent="." index="20" instance=ExtResource("11_urvfk")]
 position = Vector2(-32, -32)
+script = ExtResource("12_gwckx")
+
+[node name="Label" type="Label" parent="bed" index="2"]
+offset_left = 32.0
+offset_top = 16.0
+offset_right = 96.0
+offset_bottom = 39.0
+text = "Im Tired"
 
 [node name="Lampe" type="Sprite2D" parent="." index="21"]
 position = Vector2(10.5625, -39.4375)
@@ -264,3 +274,12 @@ partner_portal = NodePath("../TileObject2")
 [node name="TileObject2" parent="." index="43" node_paths=PackedStringArray("partner_portal") instance=ExtResource("22_3ffsv")]
 position = Vector2(64, 32)
 partner_portal = NodePath("../TileObject")
+
+[node name="frog2" parent="." index="44" instance=ExtResource("10_i41kq")]
+position = Vector2(192, -16)
+
+[node name="frog" parent="frog2" index="2" instance=ExtResource("10_i41kq")]
+position = Vector2(32, 0)
+
+[node name="frog" parent="frog2/frog" index="2" instance=ExtResource("10_i41kq")]
+position = Vector2(0, 112)

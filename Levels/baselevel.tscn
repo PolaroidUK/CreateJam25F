@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://bpdfo1rq7jga2" path="res://Levels/tilesetWalls.tres" id="1_km01x"]
 [ext_resource type="PackedScene" uid="uid://iusubyg6sstx" path="res://player.tscn" id="2_a8ppn"]
-[ext_resource type="PackedScene" path="res://mushroom.tscn" id="3_5x5um"]
+[ext_resource type="PackedScene" uid="uid://ce2ua4lbmxno1" path="res://mushroom.tscn" id="3_5x5um"]
 [ext_resource type="Script" uid="uid://bk5ggkk16dokn" path="res://Levels/tile_map_layer.gd" id="3_fdr2b"]
 [ext_resource type="Shader" uid="uid://cfswc8ojncmtt" path="res://gustav/woble.gdshader" id="4_0tfn6"]
 [ext_resource type="Texture2D" uid="uid://cpbwphdywy8yu" path="res://gustav/radial-light.png" id="4_7rqa3"]
@@ -35,7 +35,7 @@ offset = Vector2(81.305, 30.145)
 zoom = Vector2(3.515, 3.515)
 
 [node name="Player" parent="." instance=ExtResource("2_a8ppn")]
-position = Vector2(-32, 32)
+position = Vector2(-16, 32)
 
 [node name="Mushroom" parent="." instance=ExtResource("3_5x5um")]
 position = Vector2(192, 16)
@@ -56,7 +56,6 @@ height = 0.34
 color = Color(0.294028, 0.294028, 0.294028, 1)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(-9, 1)
 color = Color(1, 0.564706, 0.0901961, 1)
 texture = ExtResource("4_7rqa3")
 texture_scale = 0.25

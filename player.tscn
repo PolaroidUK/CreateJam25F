@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://iusubyg6sstx"]
+[gd_scene load_steps=22 format=3 uid="uid://iusubyg6sstx"]
 
 [ext_resource type="Script" uid="uid://b5grbri3i4vc2" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="Shader" uid="uid://b37drul0m7oev" path="res://gustav/drunk.gdshader" id="1_i3pqv"]
-[ext_resource type="Texture2D" path="res://gustav/player-sprites.tres" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://bvj7ml70luddt" path="res://gustav/player-sprites.tres" id="2_i3pqv"]
 [ext_resource type="AudioStream" uid="uid://cxbpy7nvow0wm" path="res://Audio/SFX/Footsteps/footsteps.wav" id="4_hqtel"]
+[ext_resource type="Texture2D" uid="uid://bgm5btdg3qqhu" path="res://tempAssets/Characters/Basic Charakter Spritesheet.png" id="4_sweqy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hqtel"]
 shader = ExtResource("1_i3pqv")
@@ -59,6 +60,10 @@ region = Rect2(96, 48, 48, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1c27"]
 atlas = ExtResource("2_i3pqv")
 region = Rect2(144, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op7ga"]
+atlas = ExtResource("4_sweqy")
+region = Rect2(0, 48, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sweqy"]
 animations = [{
@@ -122,6 +127,14 @@ animations = [{
 "loop": true,
 "name": &"run_up",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op7ga")
+}],
+"loop": true,
+"name": &"sleep",
+"speed": 5.0
 }]
 
 [node name="Player" type="Area2D"]
@@ -137,7 +150,7 @@ shape = SubResource("RectangleShape2D_i3pqv")
 z_index = 3
 use_parent_material = true
 sprite_frames = SubResource("SpriteFrames_sweqy")
-animation = &"idle"
+animation = &"sleep"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_hqtel")

@@ -1,28 +1,55 @@
-[gd_scene load_steps=3 format=3 uid="uid://cqcnwbncv80tx"]
+[gd_scene load_steps=9 format=3 uid="uid://cqcnwbncv80tx"]
 
 [ext_resource type="PackedScene" uid="uid://dt32jguyplc26" path="res://Levels/level_7.tscn" id="1_yvn58"]
-[ext_resource type="Script" uid="uid://b82pihaxxm5ie" path="res://tripmovement.gd" id="2_5qrgj"]
+[ext_resource type="Script" path="res://tripmovement.gd" id="2_5qrgj"]
+[ext_resource type="Shader" uid="uid://cfswc8ojncmtt" path="res://gustav/woble.gdshader" id="3_3mb2c"]
+[ext_resource type="PackedScene" uid="uid://j2njj802rcoa" path="res://frog.tscn" id="3_5qrgj"]
+[ext_resource type="Script" uid="uid://bk5ggkk16dokn" path="res://Levels/tile_map_layer.gd" id="4_wi607"]
+[ext_resource type="Texture2D" uid="uid://c58vkwefwsk7" path="res://tempAssets/Objects/Sofa.png" id="7_oh26r"]
+[ext_resource type="Texture2D" uid="uid://bqr2rm5nhklpw" path="res://tempAssets/Objects/Recliner.png" id="8_oep27"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8x6gh"]
+shader = ExtResource("3_3mb2c")
+shader_parameter/intensity = 0.0
 
 [node name="level" instance=ExtResource("1_yvn58")]
 
-[node name="Camera2D" parent="." index="4"]
+[node name="Camera2D" parent="." index="3"]
 rotation = 3.14159
 ignore_rotation = false
 
-[node name="BigTree3" parent="." index="37"]
+[node name="BigTree3" parent="." index="32"]
 script = ExtResource("2_5qrgj")
 
-[node name="TreeApple" parent="." index="39"]
+[node name="TreeApple" parent="." index="34"]
 script = ExtResource("2_5qrgj")
 
-[node name="Sunflower" parent="." index="40"]
+[node name="Sunflower" parent="." index="35"]
 script = ExtResource("2_5qrgj")
 
-[node name="Clock" parent="." index="41"]
+[node name="Clock" parent="." index="36"]
 script = ExtResource("2_5qrgj")
 
-[node name="Path" parent="." index="44"]
+[node name="Path" parent="." index="39"]
 script = ExtResource("2_5qrgj")
 
-[node name="WateringCan" parent="." index="46"]
+[node name="WateringCan" parent="." index="42"]
 script = ExtResource("2_5qrgj")
+
+[node name="Sofa" type="Sprite2D" parent="." index="54"]
+material = SubResource("ShaderMaterial_8x6gh")
+position = Vector2(48, 0)
+texture = ExtResource("7_oh26r")
+script = ExtResource("4_wi607")
+
+[node name="Recliner" type="Sprite2D" parent="." index="55"]
+material = SubResource("ShaderMaterial_8x6gh")
+position = Vector2(16, 16)
+texture = ExtResource("8_oep27")
+script = ExtResource("4_wi607")
+
+[node name="frog7" parent="." index="58" instance=ExtResource("3_5qrgj")]
+position = Vector2(224, 96)
+
+[node name="frog" parent="frog7" index="2" instance=ExtResource("3_5qrgj")]
+position = Vector2(0, -96)

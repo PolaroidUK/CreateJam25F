@@ -7,7 +7,7 @@ var moving = false
 var moving_in_dir = Vector2.ZERO
 @export var isDrunk = false
 var movecount = 0
-
+var sleeping = false
 func animate() -> void:
 	match moving_in_dir:
 		Vector2.RIGHT:
@@ -19,12 +19,17 @@ func animate() -> void:
 		Vector2.DOWN:
 			animated_sprite_2d.play("run_down")
 		_:
-			animated_sprite_2d.play("idle")
+			if sleeping:
+				animated_sprite_2d.play("sleep")
+			else:
+				animated_sprite_2d.play("idle")
 
 func _process(delta: float) -> void:
 	animate()
 
 func move(dir:Vector2):
+	if sleeping:
+		return
 	if is_tile_free_direction(dir):
 		moving = true
 		moving_in_dir = dir;

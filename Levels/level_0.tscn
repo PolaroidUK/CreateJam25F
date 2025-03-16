@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://m3pggdb0bn27"]
+
+[ext_resource type="PackedScene" uid="uid://cfxkxxfd53yrx" path="res://Levels/level_1.tscn" id="1_o6pxs"]
+
+[sub_resource type="Theme" id="Theme_t218m"]
+
+[node name="level1" instance=ExtResource("1_o6pxs")]
+
+[node name="Label" type="Label" parent="." index="48"]
+offset_left = 15.0
+offset_top = -25.0
+offset_right = 377.0
+offset_bottom = 45.0
+theme = SubResource("Theme_t218m")
+theme_override_colors/font_color = Color(0.997729, 0.998825, 0.999799, 1)
+theme_override_font_sizes/font_size = 21
+text = "A Surprise Trip"
+
+[node name="Label2" type="Label" parent="." index="49"]
+offset_left = 32.0
+offset_top = 39.0
+offset_right = 192.0
+offset_bottom = 109.0
+theme = SubResource("Theme_t218m")
+theme_override_colors/font_color = Color(0.997729, 0.998825, 0.999799, 1)
+theme_override_font_sizes/font_size = 11
+text = "You probably  shouldnt eat that mushroom"
+autowrap_mode = 2

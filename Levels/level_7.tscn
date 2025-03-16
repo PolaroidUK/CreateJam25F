@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dt32jguyplc26"]
+[gd_scene load_steps=8 format=3 uid="uid://dt32jguyplc26"]
 
 [ext_resource type="PackedScene" uid="uid://8oddq61np4ea" path="res://Levels/level_6.tscn" id="1_bh5jb"]
-[ext_resource type="PackedScene" path="res://frog.tscn" id="2_3nw2h"]
+[ext_resource type="PackedScene" uid="uid://j2njj802rcoa" path="res://frog.tscn" id="2_3nw2h"]
+[ext_resource type="Shader" uid="uid://cfswc8ojncmtt" path="res://gustav/woble.gdshader" id="3_krg5q"]
+[ext_resource type="Script" uid="uid://bk5ggkk16dokn" path="res://Levels/tile_map_layer.gd" id="4_gljo5"]
+[ext_resource type="Texture2D" uid="uid://c58vkwefwsk7" path="res://tempAssets/Objects/Sofa.png" id="7_iv344"]
+[ext_resource type="Texture2D" uid="uid://bqr2rm5nhklpw" path="res://tempAssets/Objects/Recliner.png" id="8_jmbbd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8x6gh"]
+shader = ExtResource("3_krg5q")
+shader_parameter/intensity = 0.0
 
 [node name="level" instance=ExtResource("1_bh5jb")]
 
@@ -36,3 +44,15 @@ actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1,
 [node name="frog11" parent="." index="16" instance=ExtResource("2_3nw2h")]
 position = Vector2(-96, 96)
 actions = [null, null, Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0)]
+
+[node name="Sofa" type="Sprite2D" parent="." index="54"]
+material = SubResource("ShaderMaterial_8x6gh")
+position = Vector2(48, 0)
+texture = ExtResource("7_iv344")
+script = ExtResource("4_gljo5")
+
+[node name="Recliner" type="Sprite2D" parent="." index="55"]
+material = SubResource("ShaderMaterial_8x6gh")
+position = Vector2(16, 16)
+texture = ExtResource("8_jmbbd")
+script = ExtResource("4_gljo5")

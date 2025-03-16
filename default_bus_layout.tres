@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=4 format=3 uid="uid://fcgfuby67kur"]
+[gd_resource type="AudioBusLayout" load_steps=4 format=3 uid="uid://cg0ekvo15mvvs"]
 
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_j3pel"]
 resource_name = "Reverb"
@@ -29,9 +29,33 @@ bus/2/mute = false
 bus/2/bypass_fx = false
 bus/2/volume_db = 4.23351
 bus/2/send = &"Master"
-bus/3/name = &"New Bus 3"
+bus/3/name = &"frog1"
 bus/3/solo = false
-bus/3/mute = false
+bus/3/mute = true
 bus/3/bypass_fx = false
 bus/3/volume_db = 0.0
 bus/3/send = &"Master"
+bus/4/name = &"frog2"
+bus/4/solo = false
+bus/4/mute = true
+bus/4/bypass_fx = false
+bus/4/volume_db = 0.0
+bus/4/send = &"Master"
+bus/5/name = &"frog3"
+bus/5/solo = false
+bus/5/mute = true
+bus/5/bypass_fx = false
+bus/5/volume_db = 0.0
+bus/5/send = &"Master"
+bus/6/name = &"frog4"
+bus/6/solo = false
+bus/6/mute = true
+bus/6/bypass_fx = false
+bus/6/volume_db = 0.0
+bus/6/send = &"Master"
+bus/7/name = &"frog5"
+bus/7/solo = false
+bus/7/mute = true
+bus/7/bypass_fx = false
+bus/7/volume_db = 0.0
+bus/7/send = &"Master"

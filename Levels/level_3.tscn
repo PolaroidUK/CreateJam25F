@@ -1,13 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cpavx6vcpj0th"]
+[gd_scene load_steps=2 format=3 uid="uid://cpavx6vcpj0th"]
 
 [ext_resource type="PackedScene" uid="uid://dfmmw0u3s0c0e" path="res://Levels/level_2.tscn" id="1_cb8d3"]
-[ext_resource type="Script" uid="uid://q7klohqhqguf" path="res://tileObject.gd" id="2_fa81k"]
-[ext_resource type="Texture2D" uid="uid://mi6p1vd1kr4q" path="res://tempAssets/Objects/Free_Chicken_House.png" id="3_ck3gp"]
-[ext_resource type="Texture2D" uid="uid://cg63h7rd3hn43" path="res://tempAssets/Objects/Basic_Grass_Biom_things.png" id="4_trpa2"]
-[ext_resource type="Texture2D" uid="uid://kuomo23pbfrq" path="res://tempAssets/Objects/Basic_Furniture.png" id="5_4t7ew"]
-[ext_resource type="Texture2D" uid="uid://07ldqoqvue8b" path="res://tempAssets/Objects/Paths.png" id="6_oojpf"]
-[ext_resource type="Texture2D" uid="uid://x8raqca1rcyd" path="res://tempAssets/Objects/Basic_Plants.png" id="7_7cdb2"]
-[ext_resource type="Texture2D" uid="uid://dtnhofjwloi7q" path="res://tempAssets/Objects/Basic_tools_and_meterials.png" id="8_2urlj"]
 
 [node name="level3" instance=ExtResource("1_cb8d3")]
 
@@ -20,118 +13,8 @@ isActive = true
 [node name="poratl2" parent="." index="7"]
 isActive = true
 
-[node name="Chair2" parent="." index="10"]
-actions = []
-
 [node name="Mushroom" parent="." index="12"]
-position = Vector2(192, 16)
 nextLevelnumber = "4"
 
 [node name="PointLight2D" parent="." index="16"]
-position = Vector2(-9, 1)
-
-[node name="frog" parent="." index="17"]
-material = null
-script = ExtResource("2_fa81k")
-
-[node name="bed" parent="." index="18"]
-material = null
-script = ExtResource("2_fa81k")
-
-[node name="Lampe" parent="." index="19"]
-position = Vector2(10.5625, -39.4375)
-
-[node name="Candles" parent="." index="20"]
-position = Vector2(-32.5, 97)
-
-[node name="PointLight2D2" parent="Candles" index="0"]
-material = null
-script = null
-
-[node name="FreeChickenHouse" parent="." index="21"]
-position = Vector2(144, -32)
-scale = Vector2(1, 1)
-texture = ExtResource("3_ck3gp")
-
-[node name="GardenFlower_red" parent="." index="22"]
-position = Vector2(112, 96)
-scale = Vector2(1, 1)
-texture = ExtResource("4_trpa2")
-
-[node name="BigTree" parent="." index="23"]
-position = Vector2(112, -64)
-texture = ExtResource("4_trpa2")
-
-[node name="BigTree2" parent="." index="24"]
-position = Vector2(-64, 32)
-region_rect = Rect2(16, 0, 32, 32)
-
-[node name="BigTree3" parent="." index="25"]
-position = Vector2(-96, -16)
-
-[node name="BigTree4" parent="." index="26"]
-position = Vector2(-112, 96)
-
-[node name="TreeApple" parent="." index="27"]
-position = Vector2(-64, -48)
-region_rect = Rect2(48, 0, 32, 32)
-
-[node name="Sunflower" parent="." index="28"]
-position = Vector2(176, -32)
-region_rect = Rect2(128, 32, 16, 32)
-
-[node name="Clock" parent="." index="29"]
-position = Vector2(48, -48)
-texture = ExtResource("5_4t7ew")
-region_rect = Rect2(96, 48, 16, 16)
-
-[node name="Table2" parent="." index="30"]
-position = Vector2(80, 96)
-texture = ExtResource("5_4t7ew")
-region_rect = Rect2(48, 48, 16, 16)
-
-[node name="FlowerBlue" parent="Table2" index="0"]
-position = Vector2(0, -4)
-region_rect = Rect2(80, 0, 16, 16)
-
-[node name="Table3" parent="." index="31"]
-position = Vector2(64, 96)
-
-[node name="FlowerYellow" parent="Table3" index="0"]
-position = Vector2(-1, -6)
-region_rect = Rect2(48, 0, 16, 16)
-
-[node name="Path" parent="." index="32"]
-position = Vector2(112, 32)
-texture = ExtResource("6_oojpf")
-region_rect = Rect2(16, 48, 48, 16)
-
-[node name="Crops" parent="." index="33"]
-position = Vector2(192, 96)
-texture = ExtResource("7_7cdb2")
-
-[node name="GardenFlower_blue" parent="." index="34"]
-position = Vector2(144, 64)
-texture = ExtResource("4_trpa2")
-region_rect = Rect2(80, 48, 16, 16)
-
-[node name="WateringCan" parent="." index="35"]
-position = Vector2(48, 96)
-texture = ExtResource("8_2urlj")
-region_rect = Rect2(0, 0, 16, 16)
-
-[node name="Bush" parent="." index="36"]
-position = Vector2(-10, 121)
-region_rect = Rect2(16, 48, 16, 16)
-
-[node name="Bush2" parent="." index="37"]
-position = Vector2(-42, 121)
-texture = ExtResource("4_trpa2")
-region_rect = Rect2(16, 48, 16, 16)
-
-[node name="Bush3" parent="." index="38"]
-position = Vector2(6, 121)
-
-[node name="Bush_berry" parent="." index="39"]
-position = Vector2(-26, 121)
-region_rect = Rect2(0, 48, 16, 16)
+position = Vector2(12, -43)

@@ -10,4 +10,8 @@ func movementStoppedGlobaly():
 			
 func eat():
 	Gridmanager.change_scene()
+	Music.eat()
+
+
+
 					

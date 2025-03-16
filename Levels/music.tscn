@@ -1,7 +1,44 @@
-[gd_scene load_steps=2 format=3 uid="uid://dysco6b2vlqq1"]
+[gd_scene load_steps=9 format=3 uid="uid://dysco6b2vlqq1"]
 
-[ext_resource type="AudioStream" uid="uid://df73q7oug2wn5" path="res://Audio/Music/Maintheme .wav" id="1_aampv"]
+[ext_resource type="AudioStream" uid="uid://2x8bbcxdp02l" path="res://Audio/Music/Maintheme.wav" id="1_aampv"]
+[ext_resource type="Script" uid="uid://cehvlhxysmfny" path="res://Levels/music.gd" id="2_oaub6"]
+[ext_resource type="AudioStream" uid="uid://dhj7d8opyococ" path="res://Audio/SFX/Eat/Eat.wav" id="3_kepxd"]
+[ext_resource type="AudioStream" uid="uid://cvdaga8aggloq" path="res://Audio/Music/Maintheme frog version 1.wav" id="4_8b75j"]
+[ext_resource type="AudioStream" uid="uid://bv82rjc7uxhqw" path="res://Audio/Music/Maintheme frog version 2.wav" id="5_pmqyk"]
+[ext_resource type="AudioStream" uid="uid://bwwuds3emimfk" path="res://Audio/Music/Maintheme frog version 3.wav" id="6_c7axi"]
+[ext_resource type="AudioStream" uid="uid://ecofscuadavs" path="res://Audio/Music/Maintheme frog version 4.wav" id="7_ubayt"]
+[ext_resource type="AudioStream" uid="uid://d4cmxgxehq0i4" path="res://Audio/Music/Maintheme frog version 5.wav" id="8_npsph"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 stream = ExtResource("1_aampv")
 autoplay = true
+bus = &"Music"
+script = ExtResource("2_oaub6")
+
+[node name="EatSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_kepxd")
+
+[node name="frog1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_8b75j")
+autoplay = true
+bus = &"frog1"
+
+[node name="frog2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_pmqyk")
+autoplay = true
+bus = &"frog2"
+
+[node name="frog3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_c7axi")
+autoplay = true
+bus = &"frog3"
+
+[node name="frog4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ubayt")
+autoplay = true
+bus = &"frog4"
+
+[node name="frog5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_npsph")
+autoplay = true
+bus = &"frog5"
