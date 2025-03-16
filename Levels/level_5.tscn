@@ -1,111 +1,66 @@
-[gd_scene load_steps=9 format=3 uid="uid://kmekvok5pqsd"]
+[gd_scene load_steps=5 format=3 uid="uid://kmekvok5pqsd"]
 
 [ext_resource type="PackedScene" uid="uid://bt4lhp8j3jukj" path="res://Levels/level_4.tscn" id="1_t3h5c"]
-[ext_resource type="Shader" uid="uid://cfswc8ojncmtt" path="res://gustav/woble.gdshader" id="2_ki7po"]
-[ext_resource type="Script" uid="uid://q7klohqhqguf" path="res://tileObject.gd" id="3_321yd"]
-[ext_resource type="Script" uid="uid://bejnselo7s8ns" path="res://portal.gd" id="4_1xify"]
+[ext_resource type="Texture2D" uid="uid://cpbwphdywy8yu" path="res://gustav/radial-light.png" id="3_u0s3x"]
 [ext_resource type="Texture2D" uid="uid://cg63h7rd3hn43" path="res://tempAssets/Objects/Basic_Grass_Biom_things.png" id="5_kgnlk"]
 [ext_resource type="Texture2D" uid="uid://dodikk7tqn166" path="res://tempAssets/Objects/candles.png" id="5_xagau"]
-[ext_resource type="Texture2D" uid="uid://mi6p1vd1kr4q" path="res://tempAssets/Objects/Free_Chicken_House.png" id="6_ytgun"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4wpdt"]
-shader = ExtResource("2_ki7po")
-shader_parameter/intensity = 0.0
 
 [node name="level" instance=ExtResource("1_t3h5c")]
 
-[node name="TileMapLayer2" parent="." index="0"]
-position = Vector2(-8, -8)
-
-[node name="TileMapLayer3" parent="." index="1"]
-material = SubResource("ShaderMaterial_4wpdt")
-
-[node name="TileMapLayer" parent="." index="2"]
-material = null
-
 [node name="Skuffe" parent="." index="4"]
 material = null
+position = Vector2(32, -32)
 actions = [null, Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1)]
 
 [node name="Skuffe2" parent="." index="5"]
-script = ExtResource("3_321yd")
+material = null
+position = Vector2(48, -32)
 actions = [Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, 1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1), Vector2(0, -1)]
-
-[node name="portal1" parent="." index="6"]
-script = ExtResource("4_1xify")
 
 [node name="Chair" parent="." index="8"]
 material = null
+position = Vector2(-16, 64)
 
-[node name="Table" parent="." index="9"]
-material = null
-
-[node name="Player" parent="." index="11"]
-position = Vector2(-32, 32)
+[node name="Chair2" parent="." index="10"]
+position = Vector2(16, 64)
 
 [node name="Mushroom" parent="." index="12"]
 nextLevelnumber = "6"
 
-[node name="shadows-light" parent="." index="13"]
-material = null
+[node name="frog" parent="." index="17"]
+position = Vector2(112, -16)
+
+[node name="bed" parent="." index="18"]
+position = Vector2(-32, -32)
 
 [node name="Lampe" parent="." index="19"]
-position = Vector2(10.5625, -39.4375)
 region_rect = Rect2(0, 0, 0, 0)
 
 [node name="Candles" parent="." index="20"]
-position = Vector2(-32.5, 97)
 texture = ExtResource("5_xagau")
 region_rect = Rect2(0, 0, 0, 0)
 
+[node name="PointLight2D2" parent="Candles" index="0"]
+position = Vector2(0, -4)
+texture = ExtResource("3_u0s3x")
+
 [node name="FreeChickenHouse" parent="." index="21"]
-position = Vector2(144, -32)
-texture = ExtResource("6_ytgun")
 region_rect = Rect2(0, 0, 0, 0)
 
-[node name="GardenFlower_red" parent="." index="22"]
-position = Vector2(112, 96)
-texture = ExtResource("5_kgnlk")
-region_rect = Rect2(112, 48, 16, 16)
-
 [node name="BigTree" parent="." index="23"]
-position = Vector2(112, -64)
 region_rect = Rect2(16, 0, 32, 32)
 
 [node name="BigTree2" parent="." index="24"]
-position = Vector2(-64, 32)
-region_rect = Rect2(16, 0, 32, 32)
+texture = ExtResource("5_kgnlk")
 
 [node name="BigTree3" parent="." index="25"]
-position = Vector2(-96, -16)
+texture = ExtResource("5_kgnlk")
 
 [node name="BigTree4" parent="." index="26"]
-position = Vector2(-112, 96)
 region_rect = Rect2(16, 0, 32, 32)
 
-[node name="Clock" parent="." index="29"]
-position = Vector2(48, -48)
-
-[node name="Table2" parent="." index="30"]
-position = Vector2(80, 96)
-
-[node name="FlowerBlue" parent="Table2" index="0"]
-offset = Vector2(0, 0)
-
-[node name="Table3" parent="." index="31"]
-position = Vector2(64, 96)
-
-[node name="FlowerYellow" parent="Table3" index="0"]
-position = Vector2(-1, -6)
+[node name="TreeApple" parent="." index="27"]
+texture = ExtResource("5_kgnlk")
 
 [node name="GardenFlower_blue" parent="." index="34"]
-position = Vector2(144, 64)
-
-[node name="WateringCan" parent="." index="35"]
-position = Vector2(48, 96)
-
-[node name="Bush2" parent="." index="37"]
-position = Vector2(-42, 121)
-
-[node name="Bush_berry" parent="." index="39"]
-rotation = 0.0
+offset = Vector2(0, 0)

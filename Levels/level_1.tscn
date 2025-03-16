@@ -23,7 +23,13 @@
 [node name="level1" instance=ExtResource("1_n0qsc")]
 
 [node name="TileMapLayer2" parent="." index="0"]
+material = null
 position = Vector2(-7, -8)
+script = null
+
+[node name="TileMapLayer" parent="." index="2"]
+material = null
+script = null
 
 [node name="Skuffe" parent="." index="4" instance=ExtResource("2_dilhk")]
 position = Vector2(32, -32)
