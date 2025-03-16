@@ -1,12 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://6e42k6870kr3"]
+[gd_scene load_steps=3 format=3 uid="uid://c126h1lr7a0jj"]
 
 [ext_resource type="PackedScene" uid="uid://dt32jguyplc26" path="res://Levels/level_7.tscn" id="1_dfxo2"]
-[ext_resource type="PackedScene" uid="uid://b8eielmvlw470" path="res://decoyMushroom.tscn" id="2_cefe7"]
+[ext_resource type="PackedScene" path="res://decoyMushroom.tscn" id="2_cefe7"]
 
 [node name="level" instance=ExtResource("1_dfxo2")]
-
-[node name="TileObject5" parent="." index="4"]
-actions = []
 
 [node name="TileObject6" parent="." index="52" instance=ExtResource("2_cefe7")]
 position = Vector2(-32, 80)
