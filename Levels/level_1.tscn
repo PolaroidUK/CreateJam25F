@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cfxkxxfd53yrx"]
+[gd_scene load_steps=23 format=3 uid="uid://cfxkxxfd53yrx"]
 
 [ext_resource type="PackedScene" uid="uid://bupuwcp6l0iw3" path="res://Levels/baselevel.tscn" id="1_n0qsc"]
 [ext_resource type="PackedScene" uid="uid://08xmu1jcy1th" path="res://Bookcase.tscn" id="2_dilhk"]
@@ -9,8 +9,10 @@
 [ext_resource type="PackedScene" path="res://frog.tscn" id="7_0urlm"]
 [ext_resource type="PackedScene" path="res://bed.tscn" id="8_77x7w"]
 [ext_resource type="Texture2D" uid="uid://df06u8lsyh6ff" path="res://tempAssets/Objects/lamp.png" id="9_c7pbv"]
+[ext_resource type="Shader" uid="uid://cfswc8ojncmtt" path="res://gustav/woble.gdshader" id="9_w38ni"]
 [ext_resource type="Texture2D" uid="uid://dodikk7tqn166" path="res://tempAssets/Objects/candles.png" id="10_77l7m"]
 [ext_resource type="Texture2D" uid="uid://cpbwphdywy8yu" path="res://gustav/radial-light.png" id="11_1rr3k"]
+[ext_resource type="Script" uid="uid://bk5ggkk16dokn" path="res://Levels/tile_map_layer.gd" id="11_uclwg"]
 [ext_resource type="Texture2D" uid="uid://mi6p1vd1kr4q" path="res://tempAssets/Objects/Free_Chicken_House.png" id="12_hsj5a"]
 [ext_resource type="Texture2D" uid="uid://cg63h7rd3hn43" path="res://tempAssets/Objects/Basic_Grass_Biom_things.png" id="13_w38ni"]
 [ext_resource type="Texture2D" uid="uid://kuomo23pbfrq" path="res://tempAssets/Objects/Basic_Furniture.png" id="14_uclwg"]
@@ -19,6 +21,10 @@
 [ext_resource type="Texture2D" uid="uid://dtnhofjwloi7q" path="res://tempAssets/Objects/Basic_tools_and_meterials.png" id="17_fxl23"]
 [ext_resource type="Texture2D" uid="uid://c58vkwefwsk7" path="res://tempAssets/Objects/Sofa.png" id="18_1rr3k"]
 [ext_resource type="Texture2D" uid="uid://bqr2rm5nhklpw" path="res://tempAssets/Objects/Recliner.png" id="19_hsj5a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8x6gh"]
+shader = ExtResource("9_w38ni")
+shader_parameter/intensity = 0.0
 
 [node name="level1" instance=ExtResource("1_n0qsc")]
 
@@ -61,14 +67,18 @@ position = Vector2(112, -16)
 position = Vector2(-32, -32)
 
 [node name="Lampe" type="Sprite2D" parent="." index="19"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(10.5625, -39.4375)
 scale = Vector2(1, 0.858)
 texture = ExtResource("9_c7pbv")
+script = ExtResource("11_uclwg")
 
 [node name="Candles" type="Sprite2D" parent="." index="20"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(-32.5, 97)
 scale = Vector2(0.8125, 0.75)
 texture = ExtResource("10_77l7m")
+script = ExtResource("11_uclwg")
 
 [node name="PointLight2D2" type="PointLight2D" parent="Candles" index="0"]
 position = Vector2(0, -4)
@@ -79,14 +89,18 @@ texture_scale = 0.25
 height = 50.0
 
 [node name="FreeChickenHouse" type="Sprite2D" parent="." index="21"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(144, -32)
 texture = ExtResource("12_hsj5a")
+script = ExtResource("11_uclwg")
 
 [node name="GardenFlower_red" type="Sprite2D" parent="." index="22"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(112, 96)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(112, 48, 16, 16)
+script = ExtResource("11_uclwg")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": false,
 "layer_section": false,
@@ -108,52 +122,68 @@ metadata/_aseprite_wizard_interface_config_ = {
 }
 
 [node name="BigTree" type="Sprite2D" parent="." index="23"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(112, -64)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(16, 0, 32, 32)
+script = ExtResource("11_uclwg")
 
 [node name="BigTree2" type="Sprite2D" parent="." index="24"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(-64, 32)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(16, 0, 32, 32)
+script = ExtResource("11_uclwg")
 
 [node name="BigTree3" type="Sprite2D" parent="." index="25"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(-96, -16)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(16, 0, 32, 32)
+script = ExtResource("11_uclwg")
 
 [node name="BigTree4" type="Sprite2D" parent="." index="26"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(-112, 96)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(16, 0, 32, 32)
+script = ExtResource("11_uclwg")
 
 [node name="TreeApple" type="Sprite2D" parent="." index="27"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(-64, -48)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(48, 0, 32, 32)
+script = ExtResource("11_uclwg")
 
 [node name="Sunflower" type="Sprite2D" parent="." index="28"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(176, -32)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(128, 32, 16, 32)
+script = ExtResource("11_uclwg")
 
 [node name="Clock" type="Sprite2D" parent="." index="29"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(48, -48)
 texture = ExtResource("14_uclwg")
 region_enabled = true
 region_rect = Rect2(96, 48, 16, 16)
+script = ExtResource("11_uclwg")
 
 [node name="Table2" type="Sprite2D" parent="." index="30"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(80, 96)
 texture = ExtResource("14_uclwg")
 region_enabled = true
 region_rect = Rect2(48, 48, 16, 16)
+script = ExtResource("11_uclwg")
 
 [node name="FlowerBlue" type="Sprite2D" parent="Table2" index="0"]
 position = Vector2(0, -4)
@@ -162,10 +192,12 @@ region_enabled = true
 region_rect = Rect2(80, 0, 16, 16)
 
 [node name="Table3" type="Sprite2D" parent="." index="31"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(64, 96)
 texture = ExtResource("14_uclwg")
 region_enabled = true
 region_rect = Rect2(48, 48, 16, 16)
+script = ExtResource("11_uclwg")
 
 [node name="FlowerYellow" type="Sprite2D" parent="Table3" index="0"]
 position = Vector2(-1, -6)
@@ -174,99 +206,133 @@ region_enabled = true
 region_rect = Rect2(48, 0, 16, 16)
 
 [node name="Path" type="Sprite2D" parent="." index="32"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(112, 32)
 texture = ExtResource("15_8x6gh")
 region_enabled = true
 region_rect = Rect2(16, 48, 48, 16)
+script = ExtResource("11_uclwg")
 
 [node name="Crops" type="Sprite2D" parent="." index="33"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(192, 96)
 texture = ExtResource("16_442u8")
 region_enabled = true
 region_rect = Rect2(48, 0, 16, 16)
+script = ExtResource("11_uclwg")
 
 [node name="GardenFlower_blue" type="Sprite2D" parent="." index="34"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(144, 64)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(80, 48, 16, 16)
+script = ExtResource("11_uclwg")
 
 [node name="WateringCan" type="Sprite2D" parent="." index="35"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(48, 96)
 texture = ExtResource("17_fxl23")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
+script = ExtResource("11_uclwg")
 
 [node name="Bush" type="Sprite2D" parent="." index="36"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(-10, 121)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(16, 48, 16, 16)
+script = ExtResource("11_uclwg")
 
 [node name="Bush2" type="Sprite2D" parent="." index="37"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(-42, 121)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(16, 48, 16, 16)
+script = ExtResource("11_uclwg")
 
 [node name="Bush3" type="Sprite2D" parent="." index="38"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(6, 121)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(16, 48, 16, 16)
+script = ExtResource("11_uclwg")
 
 [node name="Bush_berry" type="Sprite2D" parent="." index="39"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(-26, 121)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(0, 48, 16, 16)
+script = ExtResource("11_uclwg")
 
 [node name="crops2" type="Sprite2D" parent="." index="40"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(176, 96)
 texture = ExtResource("16_442u8")
 region_enabled = true
 region_rect = Rect2(32, 0, 16, 16)
+script = ExtResource("11_uclwg")
 
 [node name="Sprout" type="Sprite2D" parent="." index="41"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(160, -16)
 texture = ExtResource("16_442u8")
 region_enabled = true
 region_rect = Rect2(16, 16, 16, 16)
+script = ExtResource("11_uclwg")
 
 [node name="TreeSlim" type="Sprite2D" parent="." index="42"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(-112, -0.0501671)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 32)
+script = ExtResource("11_uclwg")
 
 [node name="TreeSlim2" type="Sprite2D" parent="." index="43"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(-64.0358, 79.9713)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 32)
+script = ExtResource("11_uclwg")
 
 [node name="TreeSlim3" type="Sprite2D" parent="." index="44"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(224.022, -47.8997)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 32)
+script = ExtResource("11_uclwg")
 
 [node name="greens" type="Sprite2D" parent="." index="45"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(144, 16)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(96, 16, 16, 16)
+script = ExtResource("11_uclwg")
 
 [node name="greens2" type="Sprite2D" parent="." index="46"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(176, 48)
 texture = ExtResource("13_w38ni")
 region_enabled = true
 region_rect = Rect2(96, 16, 16, 16)
+script = ExtResource("11_uclwg")
 
 [node name="Sofa" type="Sprite2D" parent="." index="47"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(48, 0)
 texture = ExtResource("18_1rr3k")
+script = ExtResource("11_uclwg")
 
 [node name="Recliner" type="Sprite2D" parent="." index="48"]
+material = SubResource("ShaderMaterial_8x6gh")
 position = Vector2(16, 16)
 texture = ExtResource("19_hsj5a")
+script = ExtResource("11_uclwg")
