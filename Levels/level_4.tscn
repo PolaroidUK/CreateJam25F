@@ -1,8 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://bt4lhp8j3jukj"]
+[gd_scene load_steps=12 format=3 uid="uid://bt4lhp8j3jukj"]
 
 [ext_resource type="PackedScene" uid="uid://cpavx6vcpj0th" path="res://Levels/level_3.tscn" id="1_ftfcu"]
 [ext_resource type="Shader" uid="uid://cfswc8ojncmtt" path="res://gustav/woble.gdshader" id="2_nsqb1"]
 [ext_resource type="Script" uid="uid://cxf1jire8iuu6" path="res://mushroom.gd" id="2_t60mx"]
+[ext_resource type="Script" uid="uid://q7klohqhqguf" path="res://tileObject.gd" id="3_77xid"]
+[ext_resource type="Texture2D" uid="uid://mi6p1vd1kr4q" path="res://tempAssets/Objects/Free_Chicken_House.png" id="11_btea2"]
+[ext_resource type="Texture2D" uid="uid://cg63h7rd3hn43" path="res://tempAssets/Objects/Basic_Grass_Biom_things.png" id="12_bdn52"]
+[ext_resource type="Texture2D" uid="uid://kuomo23pbfrq" path="res://tempAssets/Objects/Basic_Furniture.png" id="13_47koa"]
+[ext_resource type="Texture2D" uid="uid://07ldqoqvue8b" path="res://tempAssets/Objects/Paths.png" id="14_84674"]
+[ext_resource type="Texture2D" uid="uid://x8raqca1rcyd" path="res://tempAssets/Objects/Basic_Plants.png" id="15_w1odm"]
+[ext_resource type="Texture2D" uid="uid://dtnhofjwloi7q" path="res://tempAssets/Objects/Basic_tools_and_meterials.png" id="16_0eske"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ujo87"]
 shader = ExtResource("2_nsqb1")
@@ -10,14 +17,29 @@ shader_parameter/intensity = 0.0
 
 [node name="level" instance=ExtResource("1_ftfcu")]
 
+[node name="TileMapLayer2" parent="." index="0"]
+position = Vector2(-8, -8)
+
+[node name="TileMapLayer3" parent="." index="1"]
+position = Vector2(-8, -8)
+
+[node name="TileMapLayer" parent="." index="2"]
+position = Vector2(-8, -8)
+
+[node name="Camera2D" parent="." index="3"]
+position = Vector2(0, 0)
+
 [node name="portal1" parent="." index="6"]
 position = Vector2(160, 96)
 
-[node name="poratl2" parent="." index="7" node_paths=PackedStringArray("partner_portal")]
+[node name="poratl2" parent="." index="7"]
 position = Vector2(80, -32)
-partner_portal = NodePath("../portal1")
+
+[node name="Chair2" parent="." index="10"]
+actions = []
 
 [node name="Player" parent="." index="11"]
+position = Vector2(-32, 32)
 isDrunk = true
 
 [node name="Mushroom" parent="." index="12"]
@@ -25,73 +47,145 @@ position = Vector2(192, 16)
 script = ExtResource("2_t60mx")
 nextLevelnumber = "5"
 
+[node name="shadows-light" parent="." index="13"]
+position = Vector2(0, 0)
+
+[node name="highlights-light" parent="." index="14"]
+position = Vector2(0, 0)
+
+[node name="CanvasModulate" parent="." index="15"]
+position = Vector2(0, 0)
+
+[node name="PointLight2D" parent="." index="16"]
+position = Vector2(-9, 1)
+
+[node name="frog" parent="." index="17"]
+material = null
+script = ExtResource("3_77xid")
+
+[node name="bed" parent="." index="18"]
+material = null
+script = ExtResource("3_77xid")
+
 [node name="Lampe" parent="." index="19"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(10.5625, -39.4375)
 
 [node name="Candles" parent="." index="20"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(-32.5, 97)
+
+[node name="PointLight2D2" parent="Candles" index="0"]
+material = null
+script = null
 
 [node name="FreeChickenHouse" parent="." index="21"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(144, -32)
+scale = Vector2(1, 1)
+texture = ExtResource("11_btea2")
 
 [node name="GardenFlower_red" parent="." index="22"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(112, 96)
+scale = Vector2(1, 1)
+texture = ExtResource("12_bdn52")
 
 [node name="BigTree" parent="." index="23"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(112, -64)
+texture = ExtResource("12_bdn52")
 
 [node name="BigTree2" parent="." index="24"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(-64, 32)
+region_rect = Rect2(16, 0, 32, 32)
 
 [node name="BigTree3" parent="." index="25"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(-96, -16)
 
 [node name="BigTree4" parent="." index="26"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(-112, 96)
 
 [node name="TreeApple" parent="." index="27"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(-64, -48)
+region_rect = Rect2(48, 0, 32, 32)
 
 [node name="Sunflower" parent="." index="28"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(176, -32)
+region_rect = Rect2(128, 32, 16, 32)
 
 [node name="Clock" parent="." index="29"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(48, -48)
+texture = ExtResource("13_47koa")
+region_rect = Rect2(96, 48, 16, 16)
 
 [node name="Table2" parent="." index="30"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(80, 96)
+texture = ExtResource("13_47koa")
+region_rect = Rect2(48, 48, 16, 16)
 
 [node name="FlowerBlue" parent="Table2" index="0"]
 material = null
+position = Vector2(0, -4)
+region_rect = Rect2(80, 0, 16, 16)
 script = null
 
 [node name="Table3" parent="." index="31"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(64, 96)
 
 [node name="FlowerYellow" parent="Table3" index="0"]
 material = null
+position = Vector2(-1, -6)
+region_rect = Rect2(48, 0, 16, 16)
 script = null
 
 [node name="Path" parent="." index="32"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(112, 32)
+texture = ExtResource("14_84674")
+region_rect = Rect2(16, 48, 48, 16)
 
 [node name="Crops" parent="." index="33"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(192, 96)
+texture = ExtResource("15_w1odm")
 
 [node name="GardenFlower_blue" parent="." index="34"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(144, 64)
+texture = ExtResource("12_bdn52")
+region_rect = Rect2(80, 48, 16, 16)
 
 [node name="WateringCan" parent="." index="35"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(48, 96)
+texture = ExtResource("16_0eske")
+region_rect = Rect2(0, 0, 16, 16)
 
 [node name="Bush" parent="." index="36"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(-10, 121)
+region_rect = Rect2(16, 48, 16, 16)
 
 [node name="Bush2" parent="." index="37"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(-42, 121)
+texture = ExtResource("12_bdn52")
+region_rect = Rect2(16, 48, 16, 16)
 
 [node name="Bush3" parent="." index="38"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(6, 121)
 
 [node name="Bush_berry" parent="." index="39"]
 material = SubResource("ShaderMaterial_ujo87")
+position = Vector2(-26, 121)
+region_rect = Rect2(0, 48, 16, 16)

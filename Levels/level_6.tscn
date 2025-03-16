@@ -4,6 +4,14 @@
 
 [node name="level" instance=ExtResource("1_r2npx")]
 
+[node name="Skuffe" parent="." index="4"]
+material = null
+position = Vector2(32, -32)
+
+[node name="Skuffe2" parent="." index="5"]
+material = null
+position = Vector2(48, -32)
+
 [node name="Chair" parent="." index="8"]
 actions = [Vector2(0, -1), Vector2(1, 0), Vector2(0, -1), Vector2(0, 1), Vector2(-1, 0), Vector2(0, 1)]
 
@@ -14,5 +22,5 @@ actions = [Vector2(0, 1), Vector2(0, 1), Vector2(-1, 0), Vector2(-1, 0)]
 actions = [Vector2(1, 0), Vector2(1, 0), Vector2(1, 0), Vector2(1, 0), Vector2(-1, 0), Vector2(-1, 0), Vector2(-1, 0), Vector2(-1, 0)]
 
 [node name="Mushroom" parent="." index="12"]
-material = null
+position = Vector2(192, 16)
 nextLevelnumber = "1"
